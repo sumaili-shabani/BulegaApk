@@ -76,6 +76,29 @@ class EntrepriseController extends Controller
         return $this->apiData($data->paginate(4));
     }
 
+
+     function checkEtat_entreprise($id, $etat)
+    {
+        if ($id !=''  && $etat !='') {
+            // code...
+            if ($etat == 1) {
+                // desactivation
+                Entreprise::where('id',$id)->update([
+                    'etat'         =>  0
+                ]);
+                return $this->msgJson('Entreprise desactivée avec succès');
+
+            } else {
+                // activation
+                Entreprise::where('id',$id)->update([
+                    'etat'         =>  1
+                ]);
+                return $this->msgJson('Entreprise activée avec succès');
+            }
+            
+        }
+    }
+
     //filtrage 
     public function fetch_entreprise_tug($ceo, Request $request)
     {
@@ -1463,27 +1486,7 @@ class EntrepriseController extends Controller
 
     
 
-    function checkEtat_entreprise($id, $etat)
-    {
-        if ($id !='' && $etat !='') {
-            // code...
-            if ($etat == 1) {
-                // desactivation
-                Entreprise::where('id',$id)->update([
-                    'etat'         =>  0
-                ]);
-                return $this->msgJson('L\'entreprise a été desactivée avec succès');
-
-            } else {
-                // activation
-                Entreprise::where('id',$id)->update([
-                    'etat'         =>  1
-                ]);
-                return $this->msgJson('L\'entreprise a été activée avec succès');
-            }
-            
-        }
-    }
+   
 
 
     /**

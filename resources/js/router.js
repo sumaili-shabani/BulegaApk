@@ -62,6 +62,7 @@ import operation_territoire from './views/backend/admin/Territoire.vue'
 import Team from './views/backend/admin/configure_team.vue'
 import Contact_info from './views/backend/admin/configure_contact_info.vue'
 import Carousel from './views/backend/admin/configure_carousel.vue'
+import Texto from './views/backend/admin/Texto.vue'
 //fin burega
  
 
@@ -315,7 +316,12 @@ const Router = new VueRouter({
       component: Carousel,
       meta: { middleware: [isNotAdmin] }
     },
-
+    {
+      path: '/admin/texto',
+      name: 'texto_one',
+      component: Texto,
+      meta: { middleware: [isNotAdmin] }
+    },
     
 
    

@@ -185,7 +185,7 @@ export default {
             {
               icon: "store",
               text: "Envoie SMS",
-              href: "/admin/sms",
+              href: "/admin/texto",
             },
             {
               icon: "store",

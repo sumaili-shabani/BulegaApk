@@ -29,6 +29,8 @@ Route::group(['namespace'   =>  "Role"], function(){
 
 Route::group(['namespace'   =>  "User"], function(){
     Route::get("fetch_user", 'UserController@index');
+    Route::get("fetch_user_all", 'UserController@fetch_user_all');
+    
     Route::get("fetch_single_user/{id}", 'UserController@edit');
     Route::get("delete_user/{id}", 'UserController@destroy');
     Route::post("insert_user", 'UserController@store');
@@ -300,7 +302,16 @@ Route::group(['namespace'   =>  "Backend"], function(){
     Route::get("delete_territoire/{id}", 'TerritoireController@destroy');
     Route::post("insert_territoire", 'TerritoireController@store');
     Route::get("fetch_territoire_2", 'TerritoireController@fetch_territoire_2');
+
+    //texto sms
+    Route::get("fetch_texto", 'TextoController@index');
+    Route::get("fetch_single_texto/{id}", 'TextoController@edit');
+    Route::get("delete_texto/{id}", 'TextoController@destroy');
+    Route::post("insert_texto", 'TextoController@store');
     
+    Route::get("checkEtat_texto/{id}/{phone}/{etat}", 'TextoController@checkEtat_texto');
+    
+
 
     
 });

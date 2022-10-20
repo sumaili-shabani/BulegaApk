@@ -14,6 +14,7 @@ const state = {
     agentList:[],
     // mes scripts
     userList:[],
+    userListAll:[],
     roleList:[],
     siteList:[],
     memberList:[],
@@ -107,6 +108,8 @@ const getters = {
 
     // mes scripts
     userList:(state)=>(state.userList),
+    userListAll:(state)=>(state.userListAll),
+    
     roleList:(state)=>(state.roleList),
     siteList:(state)=>(state.siteList),
     memberList:(state)=>(state.memberList),
@@ -399,6 +402,16 @@ const actions = {
             }).catch((error) => console.log(error))
     },
 
+    async getUserAll({ commit }) {
+        commit('SET_LOADING_STATUS')
+        await axios.get(`${this.state.apiBaseURL}/fetch_user_all`)
+            .then(({ data }) => {
+                commit('SET_USER_All', data.data)
+                commit('SET_LOADING_STATUS')
+            }).catch((error) => console.log(error))
+    },
+
+
     
 
 
@@ -446,7 +459,7 @@ const mutations = {
         (state.projectDetail = projectDetail),
 
     SET_CATEGORYARTICLE:(state,categoryArticleList)=>(state.categoryArticleList=categoryArticleList),
-    
+    SET_USER_All:(state,userListAll)=>(state.userListAll=userListAll),
     
     
 

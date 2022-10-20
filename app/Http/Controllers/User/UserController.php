@@ -66,6 +66,21 @@ class UserController extends Controller
         
     }
 
+    function fetch_user_all()
+    {
+        $data = DB::table('users')
+        ->join('roles','users.id_role','=','roles.id')
+        ->select('users.id as user_id','users.id as id','users.avatar','users.name','users.email','users.id_role','roles.nom as role_name','users.sexe','users.telephone','users.adresse')
+        ->whereNotNull("users.telephone")
+        ->get();
+        return response()->json([
+            'data'  =>  $data
+        ]);
+        
+
+        
+    }
+
 
     function checkEtat_Compte($id, $etat)
     {

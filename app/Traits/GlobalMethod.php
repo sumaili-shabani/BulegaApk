@@ -204,6 +204,42 @@ trait GlobalMethod{
       }
     }
 
+    function getNomSite()
+    {
+        $data = DB::table('sites')
+        ->select('id', 'nom', 'description', 'email','adresse','tel1','tel2','tel3','token', 'about','mission','objectif','politique','condition','logo','facebook','linkedin','twitter','youtube')->take(1)->get();
+        $info='';
+        foreach ($data as $row) {
+            // code...
+            $info = $row->nom;
+        }
+        return strtoupper($info);
+    }
+
+    function getTokenSite()
+    {
+        $data = DB::table('sites')
+        ->select('id', 'nom', 'description', 'email','adresse','tel1','tel2','tel3','token', 'about','mission','objectif','politique','condition','logo','facebook','linkedin','twitter','youtube')->take(1)->get();
+        $info='';
+        foreach ($data as $row) {
+            // code...
+            $info = $row->token;
+        }
+        return strtoupper($info);
+    }
+
+    function getNumDevSite()
+    {
+        $data = DB::table('sites')
+        ->select('id', 'nom', 'description', 'email','adresse','tel1','tel2','tel3','token', 'about','mission','objectif','politique','condition','logo','facebook','linkedin','twitter','youtube')->take(1)->get();
+        $info='';
+        foreach ($data as $row) {
+            // code...
+            $info = $row->tel3;
+        }
+        return strtoupper($info);
+    }
+
 
 
     
