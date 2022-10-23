@@ -68,6 +68,8 @@ Route::group(['namespace'   =>  "Site"], function(){
     Route::post("insert_site", 'SiteController@store');
    
     Route::post('edit_photo_site','SiteController@editPhoto');
+    Route::get("getInfoSite", 'SiteController@getInfoSite');
+
 
 });
 
@@ -77,6 +79,9 @@ Route::group(['namespace'   =>  "Basic"], function(){
     Route::get("delete_basic/{id}", 'BasicController@destroy');
     Route::post("insert_basic", 'BasicController@store');
 
+    Route::get("getInfoBasic", 'BasicController@getInfoBasic');
+    
+
 });
 
 Route::group(['namespace'   =>  "Service"], function(){
@@ -84,6 +89,8 @@ Route::group(['namespace'   =>  "Service"], function(){
     Route::get("fetch_single_service/{id}", 'ServiceController@edit');
     Route::get("delete_service/{id}", 'ServiceController@destroy');
     Route::post("insert_service", 'ServiceController@store');
+    Route::get("fetch_services", 'ServiceController@fetch_services');
+    
 
 });
 
@@ -105,6 +112,15 @@ Route::group(['namespace'   =>  "Blog"], function(){
     Route::post("insert_blog", 'BlogController@insertData');
     Route::post("update_blog", 'BlogController@updateData');
 
+    Route::get("fetch_blog_personnel/{user_id}", 'BlogController@fetch_blog_personnel');
+    
+
+    Route::get("fetch_blog_menu", 'BlogController@fetch_blog_menu');
+    Route::get("getSingleBlog/{slug}", 'BlogController@getSingleBlog');
+
+    Route::get("showArticleCategoryPagination/{slug}", 'BlogController@showArticleCategoryPagination');
+    
+
 });
 
 
@@ -123,7 +139,8 @@ Route::group(['namespace'   =>  "Galery"], function(){
     Route::get("delete_galery/{id}", 'GaleryController@destroy');
     Route::post("insert_galery", 'GaleryController@insertData');
     Route::post("update_galery", 'GaleryController@updateData');
-
+    Route::get("getImages", 'GaleryController@getImages');
+    
 });
 
 Route::group(['namespace'   =>  "Video"], function(){
@@ -310,6 +327,25 @@ Route::group(['namespace'   =>  "Backend"], function(){
     Route::post("insert_texto", 'TextoController@store');
     
     Route::get("checkEtat_texto/{id}/{phone}/{etat}", 'TextoController@checkEtat_texto');
+
+
+    //localisation
+    Route::get("fetch_localisation", 'LocalisationController@index');
+    Route::get("fetch_single_localisation/{id}", 'LocalisationController@edit');
+    Route::get("delete_localisation/{id}", 'LocalisationController@destroy');
+    Route::post("insert_localisation", 'LocalisationController@store');
+
+    //reunion
+    Route::get("fetch_reunion", 'ReunionController@index');
+    Route::get("fetch_single_reunion/{id}", 'ReunionController@edit');
+    Route::get("delete_reunion/{id}", 'ReunionController@destroy');
+    Route::post("insert_reunion", 'ReunionController@store');
+
+    Route::get("displayInCalendar/{user_id}", 'ReunionController@displayInCalendar');
+    Route::get("showNotificationUser/{user_id}", 'ReunionController@showNotificationUser');
+    Route::get("participateToConference/{slug}", 'ReunionController@participateToConference');
+    
+    
     
 
 

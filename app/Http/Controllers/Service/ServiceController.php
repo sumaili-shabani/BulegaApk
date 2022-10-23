@@ -38,6 +38,13 @@ class ServiceController extends Controller
         return $this->apiData($data->paginate(4));
     }
 
+    public function fetch_services()
+    {
+        //
+        $data = Service::get();
+        return response()->json(['data'  =>  $data]);
+    }
+
    
     /**
      * Store a newly created resource in storage.

@@ -225,7 +225,7 @@ trait GlobalMethod{
             // code...
             $info = $row->token;
         }
-        return strtoupper($info);
+        return $info;
     }
 
     function getNumDevSite()
@@ -237,7 +237,26 @@ trait GlobalMethod{
             // code...
             $info = $row->tel3;
         }
-        return strtoupper($info);
+        return $info;
+    }
+
+    function GetIdentifiantCategory($slug)
+    {
+        $listData = DB::table("blogs")
+        ->join('category_articles','category_articles.id','=','blogs.id_cat')
+        ->select("blogs.id", "blogs.titre","blogs.slug",
+            "blogs.description","blogs.photo","blogs.etat",
+            "category_articles.nom","blogs.id_cat",
+         "blogs.created_at")
+        ->where('category_articles.slug', '=', $slug)->limit(1)->get();
+        $data = [];
+        $identifiant = '';
+        foreach ($listData as $row) {
+            # code...
+            $identifiant = $row->id_cat;
+
+        }
+        return $identifiant;
     }
 
 

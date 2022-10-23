@@ -16,20 +16,32 @@ use Illuminate\Http\Request;
 
 
 Route::get('/', function () {
-    return view('frontend.connexion');
+     return view('backend.dashbord');
+});
+
+Route::get('/test', function () {
+     return view('test');
 });
 
 Route::get('/dashbord', function () {
     return view('backend.dashbord');
 });
 
-Route::get('/login', function () {
-    return view('frontend.connexion');
+Route::get('/login_lega', function () {
+     return view('backend.dashbord');
 });
 
-Route::get('/register', function () {
-    return view('frontend.connexion');
+Route::get('/register_lega', function () {
+     return view('backend.dashbord');
 });
+
+Route::post('/sendSms', 'HomeController@sendSms');
+Route::post('/sendSmsPhone', 'HomeController@sendSmsPhone');
+
+
+
+
+/*
 
 Route::get('/registerEntreprise', function () {
     return view('frontend.register');
@@ -42,6 +54,8 @@ Route::get('/forgot', function () {
 Route::get('resete', function () {
     return view('frontend.resete');
 });
+
+*/
 
 
 

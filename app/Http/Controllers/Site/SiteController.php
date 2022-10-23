@@ -49,6 +49,14 @@ class SiteController extends Controller
         return $this->apiData($data->paginate(4));
     }
 
+    public function getInfoSite()
+    {
+        //
+        $data = Site::first();
+        return response()->json(['data'  =>  $data]);
+    }
+
+
     
     /**
      * Store a newly created resource in storage.

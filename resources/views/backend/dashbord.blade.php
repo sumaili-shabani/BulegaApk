@@ -30,14 +30,40 @@
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
     <!-- <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}"> -->
 
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.x/css/font-awesome.min.css" rel="stylesheet">
+
     
 </head>
 <body>
 
 
-	@if(!isset(auth()->user()->email))
-	<script type="text/javascript">
+	@if(isset(auth()->user()->email))
+	{{-- <script type="text/javascript">
 	  window.location="{{url('login')}}" 
+	</script> --}}
+
+	<script type="text/javascript">
+	        window.emerfine = {!! json_encode([
+	            'baseURL' => url('/'),
+	            'apiBaseURL' => url('/api'),
+	            'user' => auth()->user()
+	        ]) !!}
+	</script>
+
+
+	@else
+
+	<script type="text/javascript">
+	        window.emerfine = {!! json_encode([
+	            'baseURL' => url('/'),
+	            'apiBaseURL' => url('/api'),
+	            'user' => array(
+	            	'id'	=> null,
+	            	'name'	=> null,
+	            	'email'	=> null,
+	            	'id_role'	=> null,
+	            )
+	        ]) !!}
 	</script>
 	
 	@endif
@@ -49,13 +75,7 @@
 	    <app-init></app-init>
 	</div>
 
-	<script type="text/javascript">
-	        window.emerfine = {!! json_encode([
-	            'baseURL' => url('/'),
-	            'apiBaseURL' => url('/api'),
-	            'user' => auth()->user()
-	        ]) !!}
-	</script>
+	
 
 	<script src="{{ mix('js/app.js') }}"></script>
 

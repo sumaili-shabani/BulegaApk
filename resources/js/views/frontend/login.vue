@@ -1,129 +1,116 @@
+
+<!-- debit -->
+
 <template>
-  <div>
-    <!-- App.vue -->
+  <div v-if="userData.id_role == null">
+    <v-layout row wrap>
+      <v-flex xs12 sm12 md8 lg8>
+        <div class="mr-1">
 
-    <v-app>
-      <!-- Sizes your content based upon application components -->
-      <v-main>
-        <!-- Provides the application the proper gutter -->
-        <v-container fluid>
-          
-          <!-- form -->
 
-          <br />
-          <v-layout row wrap>
-            <v-flex x12 md4></v-flex>
-            <v-flex x12 md4>
-              <v-card class="elevation-12">
-                
-                <v-card-text>
+          <!-- debit -->
+          <div class="col-md-12">
+           
+
+            <v-container grid-list-xs>
+              <v-layout row wrap>
+                <v-flex xs12 sm12 md2 lg2>
                   
-                  <v-layout row wrap>
-                    <v-flex x12 md2></v-flex>
-                    <v-flex x12 md8>
-                      <v-form
-                        ref="form"
-                        v-model="valid"
-                        lazy-validation
-                        autocomplete="off"
-                      >
-                        <div
-                          align="center"
-                          style="cursor: pointer"
-                          class="headline"
-                          tile
-                        >
-                          <br />
-                          <v-avatar
-                            size="150"
-                            color="light-green lighten-5"
-                          >
-                            <img
-                              style=""
-                              :src="`${baseURL}/images/pnud.png`"
-                              alt=""
-                              width="100%"
-                            />
-                          </v-avatar>
-                        </div>
-                        <br />
-                        <v-text-field
-                          v-model="svData.email"
-                          outlined
-                          append-icon="email"
-                          :rules="[
-                            (v) => !!v || 'Ce champ est requis',
-                            (v) =>
-                              /.+@.+\..+/.test(v) ||
-                              'Doit être un email valide',
-                          ]"
-                          placeholder="E-mail"
-                        ></v-text-field>
-                        <v-text-field
-                          placeholder="Password"
-                          v-model="svData.password"
-                          :type="show1 ? 'text' : 'password'"
-                          outlined
-                          :append-icon="show1 ? 'visibility' : 'visibility_off'"
-                          :rules="[(v) => !!v || 'Ce champ est requis']"
-                          @click:append="show1 = !show1"
-                        ></v-text-field>
+                </v-flex>
+                <v-flex xs12 sm12 md8 lg8>
+                  <v-card  flat>
 
-                        <v-checkbox
-                          label="Mot de passe oublié?"
-                          @click="gotoPage('forgot')"
-                          @blur="$v.checkbox.$touch()"
-                        ></v-checkbox>
+                    <v-card-text>
 
-                        <v-btn
-                          dark
-                          color="primary"
-                          block
-                          :disabledb="!valid"
-                          @click="validate"
-                          ><v-icon>login</v-icon> Connexion</v-btn
-                        >
+                      <v-layout row wrap>
+                        <v-flex x12 md2></v-flex>
+                        <v-flex x12 md8>
+                          <v-form ref="form" v-model="valid" lazy-validation autocomplete="off">
+                            <div>
+                              <h4>Authentification</h4>
+                                <p>
+                                  Accédez au portail en utilisant votre e-mail et votre code d'accès.
+                                </p>
+                            </div>
+                            <br />
+                            <v-text-field v-model="svData.email" outlined append-icon="email" :rules="[
+                              (v) => !!v || 'Ce champ est requis',
+                              (v) =>
+                                /.+@.+\..+/.test(v) ||
+                                'Doit être un email valide',
+                            ]" placeholder="E-mail"></v-text-field>
+                            <v-text-field placeholder="Password" v-model="svData.password"
+                              :type="show1 ? 'text' : 'password'" outlined
+                              :append-icon="show1 ? 'visibility' : 'visibility_off'"
+                              :rules="[(v) => !!v || 'Ce champ est requis']" @click:append="show1 = !show1">
+                            </v-text-field>
 
-                        <br />
+                            <v-checkbox label="Mot de passe oublié?" 
+                              @blur="$v.checkbox.$touch()"></v-checkbox>
 
-                        Avez-vous un compte?
-                        <a
-                          @click="gotoPage('registerEntreprise')"
-                          style="text-decoration: none"
-                          >Créer un compte</a
-                        >
+                            <v-btn dark color="primary" block :disabledb="!valid" @click="validate">
+                              <v-icon>login</v-icon> Connexion
+                            </v-btn>
 
-                        <br />
-                        <br />
-                      </v-form>
-                    </v-flex>
-                    <v-flex x12 md2></v-flex>
-                  </v-layout>
-                </v-card-text>
-              </v-card>
-            </v-flex>
-            <v-flex x12 md4></v-flex>
-          </v-layout>
-          <dialogLoader v-if="diaL" />
+                            <br />
 
-          <!-- fin form -->
+                            Avez-vous un compte?
+                            <router-link to="/register_lega" style="text-decoration: none">Créer un compte</router-link>
 
-          <!-- If using vue-router -->
-          <!-- <router-view></router-view> -->
-        </v-container>
-      </v-main>
-    </v-app>
+                            <br />
+                            <br />
+                          </v-form>
+                        </v-flex>
+                        <v-flex x12 md2></v-flex>
+                      </v-layout>
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
+                <v-flex xs12 sm12 md2 lg2>
+                  
+                </v-flex>
+
+              </v-layout>
+            </v-container>
+            <dialogLoader v-if="diaL" />
+
+
+          </div>
+
+          <!-- fin -->
+
+        </div>
+      </v-flex>
+
+      <v-flex xs12 sm12 md4 lg4>
+        <div class="mr-1">
+          <SideBar />
+        </div>
+      </v-flex>
+
+
+    </v-layout>
   </div>
 </template>
-
 <script>
+import { mapGetters, mapActions } from "vuex";
 import dialogLoader from "./dialogLoader";
+import SideBar from '../backend/siteInfo/SideBar.vue';
+
 export default {
   components: {
     dialogLoader,
+    SideBar,
   },
   data() {
     return {
+      title: "about",
+      query: "",
+      dialog: false,
+      loading: false,
+      disabled: false,
+      edit: false,
+
       svData: {
         email: "",
         password: "",
@@ -132,9 +119,14 @@ export default {
       diaL: false,
       show1: false,
       titre: "Connexion et authentification au système",
-    };
+    }
+  },
+  computed: {
+    ...mapGetters(["basicInfoList", "sitInfoList", "categoryArticleList", "isloading"]),
   },
   methods: {
+    ...mapActions(["getInfoBasic", "getInfoSite", "getCategyArticle"]),
+
     showModal() {
       this.$refs.presentation.$data.dialog = true;
     },
@@ -152,9 +144,9 @@ export default {
             }
             if (data.wrong == false) {
 
-               this.diaL = false;
+              this.diaL = false;
 
-               window.location = `${this.baseURL}/dashbord`;
+              window.location = `${this.baseURL}/dashbord`;
             }
           })
           .catch((error) => {
@@ -166,7 +158,18 @@ export default {
           });
       }
     },
-   
+
   },
-};
+  created() {
+
+    this.getInfoSite();
+    this.getInfoBasic();
+    this.getCategyArticle();
+
+  }
+}
 </script>
+
+
+
+<!-- fin -->

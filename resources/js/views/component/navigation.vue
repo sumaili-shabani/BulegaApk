@@ -1,24 +1,38 @@
 <template>
   <div>
 
-    <div class="text-center mt-5">
-        
-        <v-avatar class="my-5" size="60">
+
+    <v-list>
+      <v-list-item class="px-2">
+        <v-list-item-avatar>
+
+          <v-avatar class="my-5" size="60">
          
-          <img 
-            :src="userData.avatar== null
-                ? `${baseURL}/images/avatar.png`
-                : `${baseURL}/images/` + userData.avatar
-            "
-           class="image" />
-        </v-avatar>
-        <strong><h5>{{ userData.name }}</h5></strong>
+            <img 
+              :src="userData.avatar== null
+                  ? `${baseURL}/images/avatar.png`
+                  : `${baseURL}/images/` + userData.avatar
+              "
+              class="image" />
+          </v-avatar>
+         
+        </v-list-item-avatar>
+        <v-list-item-content>
+          <v-list-item-title class="text-h6">
+            {{ userData.name }}
+          </v-list-item-title>
+          <v-list-item-subtitle>{{ userData.email}}</v-list-item-subtitle>
+        </v-list-item-content>
+
        
-        <h6 class="grey--text ">{{ userData.email}}</h6>
-        <v-btn rounded color="#2EBFAF" outlined>Se mettre à jour</v-btn>
-          
-    </div>
-    <v-divider class="mx-10 mt-3" ></v-divider>
+
+      </v-list-item>
+
+    
+    </v-list>
+
+   
+    <v-divider  ></v-divider>
 
     <v-list dense nav shaped>
       <!-- mes menus -->

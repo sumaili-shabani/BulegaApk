@@ -49,6 +49,25 @@ class BasicController extends Controller
         return $this->apiData($data->paginate(4));
     }
 
+
+    public function getInfoBasic()
+    {
+        //
+        $blog = Basic::take(1)->get();
+        $data = [];
+        foreach ($blog as $row) {
+            // code...
+            array_push($data, array(
+                'id'            =>  $row->id,
+                'apropos'       =>  html_entity_decode($row->apropos),
+                'travail'       =>  html_entity_decode($row->travail),
+                'don'           =>  html_entity_decode($row->don),
+                'structure'     =>  html_entity_decode($row->structure)
+            ));
+        }
+        return response()->json(['data'  =>  $data]);
+    }
+
    
 
     /**

@@ -68,6 +68,6 @@ class ConnexionController extends Controller
     function logout()
     {
          Auth::logout();
-         return redirect('/');
+         return redirect('/login_lega');
     }
 }

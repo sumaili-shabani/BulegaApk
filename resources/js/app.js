@@ -37,6 +37,15 @@ Vue.component('file-upload', VueUploadComponent)
 import moment from 'moment'
 Vue.prototype.moment = moment
 
+import * as VueGoogleMaps from 'vue2-google-maps'
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyCeOC7Nhgj6ZqQm83q3hdKGEJe8M28DKNg',
+  },
+ 
+ 
+})
+
 
 
 

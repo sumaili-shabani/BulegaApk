@@ -87,7 +87,11 @@ const state = {
         { designation: 'Walikale' },
         
     ],
-
+    basicInfoList:[],
+    sitInfoList:[],
+    blogSingleList:[],
+    CategorySlug: [],
+    MeetingSlug: [],
 
 
 
@@ -145,8 +149,11 @@ const getters = {
     projectDetail: (state) => state.projectDetail,
 
     categoryArticleList:(state)=>(state.categoryArticleList),
-    
-    
+    basicInfoList:(state)=>(state.basicInfoList),
+    sitInfoList:(state)=>(state.sitInfoList),
+    blogSingleList:(state)=>(state.blogSingleList),
+    CategorySlug:(state)=>(state.CategorySlug),
+    MeetingSlug:(state)=>(state.MeetingSlug),
     
     
     
@@ -411,6 +418,60 @@ const actions = {
             }).catch((error) => console.log(error))
     },
 
+    async getInfoSite({ commit }) {
+        commit('SET_LOADING_STATUS')
+        await axios.get(`${this.state.apiBaseURL}/getInfoSite`)
+            .then(({ data }) => {
+                commit('SET_INFO_SITE', data.data)
+                commit('SET_LOADING_STATUS')
+            }).catch((error) => console.log(error))
+    },
+
+    async getInfoBasic({ commit }) {
+        commit('SET_LOADING_STATUS')
+        await axios.get(`${this.state.apiBaseURL}/getInfoBasic`)
+            .then(({ data }) => {
+                commit('SET_INFO_BASIC', data.data)
+                commit('SET_LOADING_STATUS')
+            }).catch((error) => console.log(error))
+    },
+
+    async getSigleBLOGInfos({ commit }, id) {
+        commit("SET_LOADING_STATUS");
+        await axios
+            .get(`${this.state.apiBaseURL}/getSingleBlog/${id}`)
+            .then(({ data }) => {
+                commit("GET_BLOG_DETAIL", data.data);
+                commit("SET_LOADING_STATUS");
+            })
+            .catch((error) => console.log(error));
+    },
+
+    async CatgetSigleBLOGInfos({ commit }, slug) {
+        commit("SET_LOADING_STATUS");
+
+        await axios
+            .get(`${this.state.apiBaseURL}/showArticleCategoryPagination/${slug}`)
+            .then(({ data }) => {
+                commit("SET_CATEGORY_ARTICLE_DETAIL", data.data);
+                commit("SET_LOADING_STATUS");
+            })
+            .catch((error) => console.log(error));
+    },
+
+    async getMeetingSlug({ commit }, slug) {
+        commit("SET_LOADING_STATUS");
+
+        await axios
+            .get(`${this.state.apiBaseURL}/participateToConference/${slug}`)
+            .then(({ data }) => {
+                commit("SET_METTING_DETAIL", data.data);
+                commit("SET_LOADING_STATUS");
+            })
+            .catch((error) => console.log(error));
+    },
+
+    
 
     
 
@@ -460,9 +521,12 @@ const mutations = {
 
     SET_CATEGORYARTICLE:(state,categoryArticleList)=>(state.categoryArticleList=categoryArticleList),
     SET_USER_All:(state,userListAll)=>(state.userListAll=userListAll),
+    SET_INFO_SITE:(state,sitInfoList)=>(state.sitInfoList=sitInfoList),
+    SET_INFO_BASIC:(state,basicInfoList)=>(state.basicInfoList=basicInfoList),
+    GET_BLOG_DETAIL:(state,blogSingleList)=>(state.blogSingleList=blogSingleList),
+    SET_CATEGORY_ARTICLE_DETAIL:(state,CategorySlug)=>(state.CategorySlug=CategorySlug),
+    SET_METTING_DETAIL:(state,MeetingSlug)=>(state.MeetingSlug=MeetingSlug),
     
-    
-
 
 
 }

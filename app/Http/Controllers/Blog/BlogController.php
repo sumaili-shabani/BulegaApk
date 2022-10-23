@@ -25,7 +25,7 @@ class BlogController extends Controller
         ->join('category_articles','category_articles.id','=','blogs.id_cat')
         ->join('users','users.id','=','blogs.user_id')
         ->select("blogs.id", "blogs.titre","blogs.description","blogs.photo","blogs.etat",
-            "category_articles.nom","blogs.id_cat",'blogs.user_id',
+            "category_articles.nom","blogs.id_cat",'blogs.user_id',"blogs.slug",
 
             'users.avatar','users.name','users.email','users.sexe',
 
@@ -47,6 +47,140 @@ class BlogController extends Controller
         }
         $data ->orderBy("blogs.id", "desc");
         return $this->apiData($data->paginate(4));
+    }
+
+    public function fetch_blog_personnel($user_id, Request $request)
+    {
+        //
+        $data = DB::table("blogs")
+        ->join('category_articles','category_articles.id','=','blogs.id_cat')
+        ->join('users','users.id','=','blogs.user_id')
+        ->select("blogs.id", "blogs.titre","blogs.description","blogs.photo","blogs.etat",
+            "category_articles.nom","blogs.id_cat",'blogs.user_id',"blogs.slug",
+
+            'users.avatar','users.name','users.email','users.sexe',
+
+         "blogs.created_at");
+
+        if (!is_null($request->get('query'))) {
+            # code...
+            $query = $this->Gquery($request);
+
+            $data->where([
+                ['blogs.titre', 'like', '%'.$query.'%'],
+                ['blogs.user_id', $user_id]
+            ])
+            ->orderBy("blogs.id", "desc");
+
+            return $this->apiData($data->paginate(4));
+           
+
+        }
+        $data->where('blogs.user_id', $user_id)->orderBy("blogs.id", "desc");
+        return $this->apiData($data->paginate(4));
+    }
+
+    
+    function getSingleBlog($slug)
+    {
+        $blog = DB::table("blogs")
+        ->join('category_articles','category_articles.id','=','blogs.id_cat')
+        ->join('users','users.id','=','blogs.user_id')
+        ->select("blogs.id", "blogs.titre","blogs.description","blogs.photo","blogs.etat",
+            "category_articles.nom","blogs.id_cat",'blogs.user_id','blogs.slug',
+
+            'users.avatar','users.name','users.email','users.sexe',
+
+         "blogs.created_at")->where('blogs.slug', $slug)->get();
+        $data = [];
+        foreach ($blog as $row) {
+            // code...
+            array_push($data, array(
+                'id'            =>  $row->id,
+                'titre'         =>  $row->titre,
+                'id_cat'        =>  $row->id_cat,
+                'description'   =>  html_entity_decode($row->description),
+                'photo'         =>  $row->photo,
+                'name'          =>  $row->name,
+                'email'         =>  $row->email,
+                'sexe'          =>  $row->sexe,
+                'avatar'        =>  $row->avatar,
+                'created_at'    =>  $row->created_at,
+            ));
+        }
+        return response()->json(['data'  =>  $data]);
+
+    }
+
+    function showArticleCategoryPagination(Request $request, $slug)
+    {
+        $id_cat = $this->GetIdentifiantCategory($slug);
+
+        $data = DB::table("blogs")
+        ->join('category_articles','category_articles.id','=','blogs.id_cat')
+        ->join('users','users.id','=','blogs.user_id')
+        ->select("blogs.id", "blogs.titre","blogs.description","blogs.photo","blogs.etat",
+            "category_articles.nom","blogs.id_cat",'blogs.user_id',"blogs.slug",
+
+            'users.avatar','users.name','users.email','users.sexe',
+
+         "blogs.created_at");
+
+        if (!is_null($request->get('query'))) {
+            # code...
+            $query = $this->Gquery($request);
+
+            $data->inRandomOrder()->where(array(
+                ['blogs.titre', 'like', '%'.$query.'%'],
+                ['blogs.etat', 1],
+                ['blogs.id_cat', $id_cat],
+            ))
+            ->orWhere('blogs.description', 'like', '%'.$query.'%')
+            ->orWhere('category_articles.nom', 'like', '%'.$query.'%')
+            ->orderBy("blogs.id", "desc");
+
+            return $this->apiData($data->paginate(50));
+           
+
+        }
+        $data->inRandomOrder()->where(array(
+                ['blogs.etat', 1],
+                ['blogs.id_cat', $id_cat],
+                
+            ));
+        return $this->apiData($data->paginate(50));
+    }
+
+
+    public function fetch_blog_menu(Request $request)
+    {
+        //
+        $data = DB::table("blogs")
+        ->join('category_articles','category_articles.id','=','blogs.id_cat')
+        ->join('users','users.id','=','blogs.user_id')
+        ->select("blogs.id", "blogs.titre","blogs.description","blogs.photo","blogs.etat",
+            "category_articles.nom","blogs.id_cat","blogs.slug",'blogs.user_id',
+
+            'users.avatar','users.name','users.email','users.sexe',
+
+         "blogs.created_at");
+
+        if (!is_null($request->get('query'))) {
+            # code...
+            $query = $this->Gquery($request);
+
+            $data->where('blogs.titre', 'like', '%'.$query.'%')
+            ->orWhere('blogs.description', 'like', '%'.$query.'%')
+            ->orWhere('category_articles.nom', 'like', '%'.$query.'%')
+            ->orWhere('users.name', 'like', '%'.$query.'%')
+            ->orderBy("blogs.id", "desc");
+
+            return $this->apiData($data->paginate(2));
+           
+
+        }
+        $data ->orderBy("blogs.id", "desc");
+        return $this->apiData($data->paginate(2));
     }
 
     function checkEtat_blog($id, $etat)

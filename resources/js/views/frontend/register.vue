@@ -1,152 +1,137 @@
+
+
+<!-- debit -->
+
+<!-- debit -->
+
 <template>
-  <div>
-    <!-- App.vue -->
+  <div v-if="userData.id_role == null">
+    <v-layout row wrap>
+      <v-flex xs12 sm12 md8 lg8>
+        <div class="mr-1">
 
-    <v-app>
-      <!-- Sizes your content based upon application components -->
-      <v-main>
-        <!-- Provides the application the proper gutter -->
-        <v-container fluid>
-          <!-- form -->
-          <br />
-          <v-layout row wrap>
-            <v-flex x12 md4></v-flex>
-            <v-flex x12 md4>
-              <v-card class="elevation-12">
-               
-                <v-card-text>
-                  <v-layout row wrap>
-                    <v-flex x12 md2></v-flex>
-                    <v-flex x12 md8>
-                      <v-form
-                        ref="form"
-                        v-model="valid"
-                        lazy-validation
-                        autocomplete="off"
-                      >
-                        <div
-                          align="center"
-                          style="cursor: pointer"
-                          class="headline"
-                        >
-                          <br />
-                         <v-avatar
-                            size="150"
-                            color="light-green lighten-5"
-                          >
-                            <img
-                              style=""
-                              :src="`${baseURL}/images/pnud.png`"
-                              alt=""
-                              width="100%"
-                            />
-                          </v-avatar>
-                        </div>
-                        <br />
-                        <v-text-field
-                          label="Nom"
-                          append-icon="person"
-                          :rules="[(v) => !!v || 'Ce champ est requis']"
-                          outlined
-                          v-model="svData.name"
-                        ></v-text-field>
 
-                        <v-text-field
-                          v-model="svData.email"
-                          outlined
-                          append-icon="email"
-                          :rules="[
-                            (v) => !!v || 'Ce champ est requis',
-                            (v) =>
-                              /.+@.+\..+/.test(v) ||
-                              'Doit être un email valide',
-                          ]"
-                          placeholder="E-mail"
-                        ></v-text-field>
+          <!-- debit -->
+          <div class="col-md-12">
 
-                        <v-select
-                          :items="[{ designation: 'M' }, { designation: 'F' }]"
-                          label="Sexe"
-                          append-icon="wc"
-                          :rules="[(v) => !!v || 'Ce champ est requis']"
-                          outlined
-                          dense
-                          item-text="designation"
-                          item-value="designation"
-                          v-model="svData.sexe"
-                        ></v-select>
 
-                        <v-text-field
-                          placeholder="Password"
-                          v-model="svData.password"
-                          :type="show1 ? 'text' : 'password'"
-                          outlined
-                          :append-icon="show1 ? 'visibility' : 'visibility_off'"
-                          :rules="[(v) => !!v || 'Ce champ est requis']"
-                          @click:append="show1 = !show1"
-                        ></v-text-field>
+            <v-container grid-list-xs>
+              <v-layout row wrap>
+                <v-flex xs12 sm12 md2 lg2>
 
-                        <v-checkbox
-                          :rules="[
-                            (v) => !!v || 'Vous devez accepter de continuer!',
-                          ]"
-                          label="J'accepte Politique de confidentialité"
-                          required
-                        ></v-checkbox>
+                </v-flex>
+                <v-flex xs12 sm12 md8 lg8>
 
-                        <v-btn
-                          dark
-                          
-                          color="primary"
-                          block
-                          :disabledb="!valid"
-                          @click="validate"
-                          >
-                          <v-icon>save_alt</v-icon>
-                          S'ENREGISTRER
-                          </v-btn
-                        >
+                  <v-container grid-list-xs>
+                    <v-card flat>
 
-                        <br />
+                      <v-card-text>
+                        <v-layout row wrap>
+                          <v-flex x12 md2></v-flex>
+                          <v-flex x12 md8>
+                            <v-form ref="form" v-model="valid" lazy-validation autocomplete="off">
+                              <div>
+                                <h4>Création de compte</h4>
+                                <p>
+                                  S'identifier et devenir membre dès à présent
+                                  en complétent le formulaire de la fiche d'identification ci-bas!
+                                </p>
+                              </div>
+                              <br />
+                              <v-text-field label="Nom" append-icon="person"
+                                :rules="[(v) => !!v || 'Ce champ est requis']" outlined v-model="svData.name">
+                              </v-text-field>
 
-                        J'ai déjà un compte?
-                        <a
-                          @click="gotoPage('')"
-                          style="text-decoration: none"
-                          >Se connecter</a
-                        >
+                              <v-text-field v-model="svData.email" outlined append-icon="email" :rules="[
+                                (v) => !!v || 'Ce champ est requis',
+                                (v) =>
+                                  /.+@.+\..+/.test(v) ||
+                                  'Doit être un email valide',
+                              ]" placeholder="E-mail"></v-text-field>
 
-                        <br />
-                        <br />
-                      </v-form>
-                    </v-flex>
-                    <v-flex x12 md2></v-flex>
-                  </v-layout>
-                </v-card-text>
-              </v-card>
-            </v-flex>
-            <v-flex x12 md4></v-flex>
-          </v-layout>
-          <dialogLoader v-if="diaL" />
+                              <v-select :items="[{ designation: 'M' }, { designation: 'F' }]" label="Sexe"
+                                append-icon="wc" :rules="[(v) => !!v || 'Ce champ est requis']" outlined dense
+                                item-text="designation" item-value="designation" v-model="svData.sexe"></v-select>
 
-          <!-- fin form -->
+                              <v-text-field placeholder="Password" v-model="svData.password"
+                                :type="show1 ? 'text' : 'password'" outlined
+                                :append-icon="show1 ? 'visibility' : 'visibility_off'"
+                                :rules="[(v) => !!v || 'Ce champ est requis']" @click:append="show1 = !show1">
+                              </v-text-field>
 
-          <!-- If using vue-router -->
-          <!-- <router-view></router-view> -->
-        </v-container>
-      </v-main>
-    </v-app>
+                              <v-checkbox :rules="[
+                                (v) => !!v || 'Vous devez accepter de continuer!',
+                              ]" label="J'accepte Politique de confidentialité" required></v-checkbox>
+
+                              <v-btn dark color="primary" block :disabledb="!valid" @click="validate">
+                                <v-icon>save_alt</v-icon>
+                                S'ENREGISTRER
+                              </v-btn>
+
+                              <br />
+
+                              J'ai déjà un compte?
+                              <router-link to="/login_lega" style="text-decoration: none">Se connecter</router-link>
+
+
+                              <br />
+                              <br />
+                            </v-form>
+                          </v-flex>
+                          <v-flex x12 md2></v-flex>
+                        </v-layout>
+                      </v-card-text>
+                    </v-card>
+                  </v-container>
+
+
+
+                </v-flex>
+                <v-flex xs12 sm12 md2 lg2>
+
+                </v-flex>
+
+              </v-layout>
+            </v-container>
+            <dialogLoader v-if="diaL" />
+
+
+          </div>
+
+          <!-- fin -->
+
+        </div>
+      </v-flex>
+
+      <v-flex xs12 sm12 md4 lg4>
+        <div class="mr-1">
+          <SideBar />
+        </div>
+      </v-flex>
+
+
+    </v-layout>
   </div>
 </template>
-
 <script>
+import { mapGetters, mapActions } from "vuex";
 import dialogLoader from "./dialogLoader";
+import SideBar from '../backend/siteInfo/SideBar.vue';
+
 export default {
   components: {
     dialogLoader,
+    SideBar,
   },
   data() {
     return {
+      title: "about",
+      query: "",
+      dialog: false,
+      loading: false,
+      disabled: false,
+      edit: false,
+
       svData: {
         id: "",
         name: "",
@@ -159,9 +144,14 @@ export default {
       show1: false,
       titre:
         "Devenir à présent membre au système en créant un compte utilisateur",
-    };
+    }
+  },
+  computed: {
+    ...mapGetters(["basicInfoList", "sitInfoList", "categoryArticleList", "isloading"]),
   },
   methods: {
+    ...mapActions(["getInfoBasic", "getInfoSite", "getCategyArticle"]),
+
     showModal() {
       this.$refs.presentation.$data.dialog = true;
     },
@@ -184,7 +174,7 @@ export default {
               this.diaL = false;
             }
             if (data.success == true) {
-              window.location = `${this.baseURL}/login`;
+              window.location = `${this.baseURL}/login_lega`;
             }
           })
           .catch((error) => {
@@ -196,6 +186,19 @@ export default {
           });
       }
     },
+
   },
-};
+  created() {
+
+    this.getInfoSite();
+    this.getInfoBasic();
+    this.getCategyArticle();
+
+  }
+}
 </script>
+
+
+
+<!-- fin -->
+

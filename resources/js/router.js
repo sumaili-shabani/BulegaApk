@@ -32,6 +32,7 @@ import UserSecure from './views/backend/admin/basicSecure.vue'
 
 import profil_stat from  './views/backend/admin/pnud/profil_stat.vue'
 
+import Operation_blog_personele from './views/backend/admin/user_operation_blog.vue'
 
 /*
 *les scripts commencent
@@ -63,7 +64,32 @@ import Team from './views/backend/admin/configure_team.vue'
 import Contact_info from './views/backend/admin/configure_contact_info.vue'
 import Carousel from './views/backend/admin/configure_carousel.vue'
 import Texto from './views/backend/admin/Texto.vue'
+
+import Reunion from './views/backend/admin/Reunion.vue'
+import Calendrier from './views/backend/admin/Conference.vue'
+
+import MeetingConference from  './views/backend/admin/MeetingConference.vue'
+
+import LoginLega from  './views/frontend/login.vue';
+import RegisterLega from  './views/frontend/register.vue';
 //fin burega
+
+//partie blog
+import About from './views/backend/siteInfo/About.vue'
+import Work from './views/backend/siteInfo/Work.vue'
+import Structure from './views/backend/siteInfo/Structure.vue'
+import Don from './views/backend/siteInfo/Don.vue'
+import Contact from './views/backend/siteInfo/Contact.vue'
+import TeamHome from './views/backend/siteInfo/Team.vue'
+import VideoHome from './views/backend/siteInfo/Video.vue'
+import GaleryHome from './views/backend/siteInfo/Galery.vue'
+import Articles from './views/backend/siteInfo/Articles.vue'
+import BlogSingle from './views/backend/siteInfo/ArticleSigle.vue'
+import articleCategory from './views/backend/siteInfo/CategoryArticle.vue'
+import Accueil from './views/backend/siteInfo/Accueil.vue'
+import MapGoogle from './views/backend/siteInfo/Map.vue'
+
+//blog parie
  
 
 /*
@@ -95,6 +121,102 @@ import GroupChat from  './views/backend/admin/pnud/pages/groupChat.vue'
 const Router = new VueRouter({
   mode: 'history',
   routes: [
+
+    //blog
+    
+    {
+      path: '/',
+      name: 'Accueil',
+      component: Accueil,
+
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: About,
+
+    },
+    {
+      path: '/work',
+      name: 'work',
+      component: Work,
+
+    },
+    {
+      path: '/structure',
+      name: 'structure',
+      component: Structure,
+
+    },
+    {
+      path: '/don',
+      name: 'don',
+      component: Don,
+
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Contact,
+
+    },
+    {
+      path: '/teamMember',
+      name: 'team',
+      component: TeamHome,
+
+    },
+    {
+      path: '/galery_photo',
+      name: 'galery_photo_home',
+      component: GaleryHome,
+
+    },
+    {
+      path: '/video',
+      name: 'video_home',
+      component: VideoHome,
+
+    },
+    {
+      path: '/articles',
+      name: 'articles_home',
+      component: Articles,
+
+    },
+    {
+      path: "/article/:slug",
+      name: "article_one",
+      component: BlogSingle,
+    },
+
+    
+    {
+      path: "/articleCategory/:slug",
+      name: "articleCategory_one",
+      component: articleCategory,
+    },
+    {
+      path: '/login_lega',
+      name: 'login_home',
+      component: LoginLega,
+
+    },
+
+    {
+      path: '/register_lega',
+      name: 'register_lega_home',
+      component: RegisterLega,
+
+    },
+
+    
+    
+    //fin blog
+
+    
+
+
     {
       path: '/apps/infos',
       name: 'infos',
@@ -322,6 +444,29 @@ const Router = new VueRouter({
       component: Texto,
       meta: { middleware: [isNotAdmin] }
     },
+
+    {
+      path: '/admin/reunion',
+      name: 'reunion_one',
+      component: Reunion,
+      meta: { middleware: [isNotAdmin] }
+    },
+
+    {
+      path: '/admin/calendrier',
+      name: 'calendrier_one',
+      component: Calendrier,
+      meta: { middleware: [isNotAdmin] }
+    },
+
+    {
+      path: "/meeting/:slug",
+      name: "meeting_one",
+      component: MeetingConference,
+      // meta: { middleware: [isNotAdmin] }
+    },
+
+    
     
 
    
@@ -429,6 +574,21 @@ const Router = new VueRouter({
       component: GroupChat,
       meta: { middleware: [isNotUser] }
     },
+    {
+      path: '/user/calendrier',
+      name: 'calendrier_one',
+      component: Calendrier,
+      meta: { middleware: [isNotUser] }
+    },
+    {
+      path: '/user/operation_blog',
+      name: 'operation_blog',
+      component: Operation_blog_personele,
+      meta: { middleware: [isNotUser] }
+    },
+
+  
+
     
 
      /*
@@ -446,22 +606,42 @@ const Router = new VueRouter({
 
     
     {
-      path: '/member/dashbord',
-      name: 'dashbord',
-      component: Profil_stat,
-      // meta: { middleware: [isNotMember] }
+      path: '/member/dashboard',
+      name: 'dashbord2',
+      component: DashboardAdmin,
+      meta: { middleware: [isNotMember] }
     },
     {
       path: '/member/profil',
       nema: 'profil',
       component: UserProfil,
-      // meta: { middleware: [isNotMember] }
+      meta: { middleware: [isNotMember] }
     },
 
     {
       path: '/member/security',
       name: 'security',
       component: UserSecure,
+      meta: { middleware: [isNotMember] }
+    },
+
+    {
+      path: '/member/chat',
+      name: 'chat_3',
+      component: GroupChat,
+      meta: { middleware: [isNotMember] }
+    },
+
+    {
+      path: '/member/calendrier',
+      name: 'calendrier_one',
+      component: Calendrier,
+      meta: { middleware: [isNotMember] }
+    },
+    {
+      path: '/member/operation_blog',
+      name: 'operation_blog',
+      component: Operation_blog_personele,
       meta: { middleware: [isNotMember] }
     },
 

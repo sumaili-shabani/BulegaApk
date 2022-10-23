@@ -37,6 +37,27 @@ class GaleryController extends Controller
         return $this->apiData($data->paginate(4));
     }
 
+    public function getImages(Request $request)
+    {
+        //
+          $data = DB::table("galeries")
+        ->select("galeries.id", "galeries.photo","galeries.created_at");
+
+        if (!is_null($request->get('query'))) {
+            # code...
+            $query = $this->Gquery($request);
+
+            $data->where('galeries.photo', 'like', '%'.$query.'%')
+            ->orderBy("galeries.id", "desc");
+
+            return $this->apiData($data->paginate(4));
+           
+
+        }
+        $data->orderBy("galeries.id", "desc");
+        return $this->apiData($data->paginate(4));
+    }
+
     function insertData(Request $request)
     {
 

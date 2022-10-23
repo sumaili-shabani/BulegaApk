@@ -1,7 +1,11 @@
 <template>
   <v-app id="inspire">
     <!-- navigation -->
-    <v-navigation-drawer v-model="drawer" app>
+    <v-navigation-drawer  v-model="drawer"  app  clipped > 
+
+      <v-list dense shaped>
+        <v-subheader>Menu</v-subheader>
+      </v-list>
       <!-- navigation -->
       <Navigation :linkAdmin="linkAdmin" />
       <!-- fin navigation -->
@@ -9,9 +13,26 @@
     <!-- fin navigation -->
 
     <!-- appbar -->
-    <v-app-bar app elevate-on-scroll elevation="3">
+    <v-app-bar clipped-left app flat elevation="1" >
 
-      <v-app-bar-nav-icon @click="drawer = !drawer"> </v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="changeDrawer"> </v-app-bar-nav-icon>
+
+      <v-col lg="4" cols="4" xs="4" v-show="search">
+        <v-form>
+          <v-text-field
+            class="p-0 m-0 mt-6"
+            full-width
+            dense
+            append-icon="mdi-magnify"
+            outlined
+            rounded
+            placeholder="Search"
+          />
+        </v-form>  
+      </v-col>
+
+      
+      <v-spacer />
 
        
       <v-spacer />
@@ -19,6 +40,89 @@
        
       
       <v-spacer />
+
+      <div class="d-none d-sm-flex">
+        <v-btn router to="/about" text>
+          <v-icon>mail</v-icon> Qui sommes-nous ?
+        </v-btn>
+
+
+        <v-btn text router to="/teamMember">
+          <v-icon>person</v-icon> Groupe
+        </v-btn>
+
+        <v-btn text router to="/contact">
+          <v-icon>mail</v-icon> Contact
+        </v-btn>
+
+      </div>
+
+       
+      <v-btn icon router to="/">
+          <v-icon>mdi-home</v-icon> 
+        
+      </v-btn>
+
+      <v-menu
+        v-model="menu"
+        :close-on-content-click="false"
+        :nudge-width="200"
+        offset-x
+      >
+        <template  v-slot:activator="{ on, attrs }" >
+          <v-btn
+            icon
+            v-bind="attrs"
+            v-on="on"
+          >
+              <v-icon>install_desktop</v-icon>
+          </v-btn>
+          
+        </template>
+        
+
+        <!-- import menuActualite -->
+        <v-card>
+         <AutreMenu />
+        </v-card>
+        <!-- fin import menu -->
+
+      </v-menu>
+
+
+      <v-btn icon @click="search = !search">
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+
+
+      <v-menu
+
+        open-on-hover
+        bottom
+        offset-y
+        
+        right
+      >
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            icon
+            
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-icon>mdi-dots-vertical</v-icon>
+          </v-btn>
+        </template>
+
+        <!-- categories -->
+        <CategoryMenu />
+        <!-- fin categories  -->
+
+       
+      </v-menu>
+
+
+
       <!-- notification -->
       <v-btn @click="changeTheme" small fab depressed class="mr-2">
           <v-icon>{{ themeIcon }}</v-icon>
@@ -44,6 +148,15 @@
         <router-view></router-view>
       </v-container>
     </v-main>
+
+    <div v-if="userData.id == null">
+      <v-footer style="background: #f5f5f540">
+        <FooterVue />
+      </v-footer>
+    </div>
+    
+
+
   </v-app>
 </template>
 
@@ -52,12 +165,19 @@ import { mapGetters, mapActions } from "vuex";
 import Navigation from "./views/component/navigation.vue";
 import Notification from "./views/component/notification.vue";
 import NavMenu from "./views/component/navMenu.vue";
+import AutreMenu from  "./views/component/AutreMenu.vue";
+import CategoryMenu from  "./views/component/CategoryMenu.vue";
+import FooterVue from "./views/backend/siteInfo/Footer.vue";
+
 export default {
   name: "App",
   components: {
     Navigation,
     Notification,
     NavMenu,
+    AutreMenu,
+    CategoryMenu,
+    FooterVue,
   },
   data() {
     return {
@@ -69,11 +189,24 @@ export default {
       darkBg: "background:rgb(40, 42, 54)",
 
       linkAdmin: [],
+      search:false,
+
+
+      fav: true,
+      menu: false,
+      message: false,
+      hints: true,
+
+
+
+
+
     };
   },
   created() {
     this.showConnected();
     this.testLink();
+    this.testUser();
   },
   computed: {
     ...mapGetters(["userList", "isloading"]),
@@ -81,7 +214,23 @@ export default {
   methods: {
 
     ...mapActions(["getUser"]),
-
+    testUser()
+    {
+      if (this.userData.id != null) {
+        this.drawer = true;
+      } else {
+        this.drawer = false;
+      }
+    },
+    changeDrawer()
+    {
+        if (this.userData.id != null) {
+          this.drawer = !this.drawer;
+        } else {
+          
+        }
+        
+    },
     changeTheme() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
       !this.$vuetify.theme.dark ? this.lightMode() : this.darkMode();
@@ -189,6 +338,16 @@ export default {
             },
             {
               icon: "store",
+              text: "Reunion",
+              href: "/admin/reunion",
+            },
+            {
+              icon: "store",
+              text: "Conférence et calendrier",
+              href: "/admin/calendrier",
+            },
+            {
+              icon: "store",
               text: "Statistique sur Les utilisateur",
               href: "/admin/statistique_user",
             },
@@ -239,7 +398,7 @@ export default {
           listGroup: [
             {
               text: "Articles",
-              icon: "content_paste_go",
+              icon: "airplay",
               items: [
                
                 {
@@ -278,10 +437,16 @@ export default {
           ],
 
           links_operation: [
+            // {
+            //   icon: "credit_card",
+            //   text: "Mon entreprise",
+            //   href: "/user/liste_entreprise",
+            // },
+
             {
-              icon: "credit_card",
-              text: "Mon entreprise",
-              href: "/user/liste_entreprise",
+              icon: "store",
+              text: "Conférence et calendrier",
+              href: "/user/calendrier",
             },
             
           ],
@@ -302,13 +467,15 @@ export default {
 
           listGroup: [
             {
-              text: "Statistiques",
-              icon: "donut_small",
+              text: "Articles",
+              icon: "airplay",
               items: [
+               
                 {
-                  text: "Ma statistique actuelle",
-                  href: "/user/profil_stat",
+                  text: "Blog",
+                  href: "/user/operation_blog",
                 },
+                
               ],
             },
           ],
@@ -319,13 +486,13 @@ export default {
             {
               icon: "mdi-microsoft-windows",
               text: "Tableau de bord",
-              href: "/member/dashbord",
+              href: "/member/dashboard",
             },
 
             {
-              icon: "mdi-account",
-              text: "Crédit",
-              href: "/member/credit",
+              icon: "question_answer",
+              text: "Messagerie",
+              href: "/member/chat",
             },
           ],
 
@@ -335,14 +502,9 @@ export default {
 
           links_operation: [
             {
-              icon: "credit_card",
-              text: "Entreprise",
-              href: "/member/liste_entreprise",
-            },
-            {
               icon: "store",
-              text: "Opération 2",
-              href: "/member/operation2",
+              text: "Conférence et calendrier",
+              href: "/member/calendrier",
             },
           ],
 
@@ -358,13 +520,15 @@ export default {
 
           listGroup: [
             {
-              text: "Statistiques",
-              icon: "donut_small",
+              text: "Articles",
+              icon: "airplay",
               items: [
+               
                 {
-                  text: "Ma statistique actuelle",
-                  href: "/member/profil_stat",
+                  text: "Blog",
+                  href: "/member/operation_blog",
                 },
+                
               ],
             },
           ],
