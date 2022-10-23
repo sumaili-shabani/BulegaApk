@@ -30,6 +30,8 @@ Route::group(['namespace'   =>  "Role"], function(){
 Route::group(['namespace'   =>  "User"], function(){
     Route::get("fetch_user", 'UserController@index');
     Route::get("fetch_user_all", 'UserController@fetch_user_all');
+    Route::get("AllUserfetch", 'UserController@AllUserfetch');
+    
     
     Route::get("fetch_single_user/{id}", 'UserController@edit');
     Route::get("delete_user/{id}", 'UserController@destroy');

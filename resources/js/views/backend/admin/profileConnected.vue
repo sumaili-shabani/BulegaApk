@@ -23,6 +23,10 @@
       <div>Adresse domicile {{ svData.adresse }}</div>
 
       <div>Sexe: {{ svData.sexe }}</div>
+
+      <div>Territoire {{ svData.territoire }}</div>
+      <div>Chefferie {{ svData.chefferie }}</div>
+      <div>Groupement {{ svData.groupement }}</div>
     </v-card-text>
   </v-card>
 </template>
@@ -46,6 +50,10 @@ export default {
         avatar: "",
         telephone: "",
         adresse: "",
+
+        territoire: "",
+        chefferie: "",
+        groupement: "",
       },
       fetchData: null,
       titreModal: "",

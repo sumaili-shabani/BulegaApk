@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 19 oct. 2022 à 14:24
+-- Généré le : dim. 23 oct. 2022 à 03:55
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.4.27
 
@@ -42,7 +42,7 @@ CREATE TABLE `basics` (
 --
 
 INSERT INTO `basics` (`id`, `apropos`, `travail`, `don`, `structure`, `created_at`, `updated_at`) VALUES
-(1, '<h2><strong>Au début du xxe siècle, le roi Léopold II fit appel</strong></h2><p>Le Bulega dans le «&nbsp;domaine CFL&nbsp;»</p><p>Au début du&nbsp;xxe&nbsp;siècle, le roi Léopold II fit appel à son concours pour mettre à exécution un projet de chemins de fer dans l’Est de l’État indépendant, afin de mieux occuper ces régions et de les relier au Bas-Congo par de bonnes voies de communication. L\'histoire de l\'exploitation coloniale du Bulega est liée à l\'histoire d\'une société commerciale belge, le&nbsp;<strong>Groupe Empain</strong>. Le&nbsp;<strong>Groupe Empain</strong>&nbsp;constitue un ensemble informel de sociétés créées à l’initiative du baron Édouard Empain (1852-1929), dans les secteurs des transports et de l’électricité essentiellement, mais aussi dans ceux de la construction électrique, de l’extraction minière, de l’immobilier… La convention entre le roi Léopold II et le Groupe Empain de 1902 créa la compagnie à charte, la&nbsp;<i>Compagnie des Chemins de Fer du Congo supérieur aux Grands Lacs africains, en abrégé C.F.L.</i>, et le Groupe Empain la dotait d’un capital de 25 millions. La&nbsp;<i>Compagnie CFL</i>&nbsp;devait construire deux chemins de fer, l’un reliant «&nbsp;le fleuve Congo en aval et en amont de Stanleyville au lac Albert&nbsp;», l’autre «&nbsp;le fleuve Congo en aval et en amont de Nyangwe au lac Tanganyika&nbsp;». En contrepartie de la construction de son réseau ferroviaire, la&nbsp;<i>Compagnie CFL</i>&nbsp;a reçu le monopole sur un domaine foncier, forestier et minier. C\'est toute province Orientale d\'alors qui constituait le domaine de la&nbsp;<i>Compagnie CFL</i>. Le territoire du pays Lega, le Bulega, sous l\'administration de l\'EIC se retrouve dans le district d\'abord puis dans la province Orientale et dans le domaine de la&nbsp;<i>Compagnie C.F.L</i></p>', '<p>travail</p>', '<p>nous faire un don</p>', '<p>notre structure de gestion</p>', '2022-01-29 19:14:06', '2022-10-19 07:08:41');
+(1, '<h2><strong>Au début du xxe siècle, le roi Léopold II fit appel</strong></h2><p>Le Bulega dans le « domaine CFL »</p><p>Au début du xxe siècle, le roi Léopold II fit appel à son concours pour mettre à exécution un projet de chemins de fer dans l’Est de l’État indépendant, afin de mieux occuper ces régions et de les relier au Bas-Congo par de bonnes voies de communication. L\'histoire de l\'exploitation coloniale du Bulega est liée à l\'histoire d\'une société commerciale belge, le <strong>Groupe Empain</strong>. Le <strong>Groupe Empain</strong> constitue un ensemble informel de sociétés créées à l’initiative du baron Édouard Empain (1852-1929), dans les secteurs des transports et de l’électricité essentiellement, mais aussi dans ceux de la construction électrique, de l’extraction minière, de l’immobilier… La convention entre le roi Léopold II et le Groupe Empain de 1902 créa la compagnie à charte, la <i>Compagnie des Chemins de Fer du Congo supérieur aux Grands Lacs africains, en abrégé C.F.L.</i>, et le Groupe Empain la dotait d’un capital de 25 millions. La <i>Compagnie CFL</i> devait construire deux chemins de fer, l’un reliant « le fleuve Congo en aval et en amont de Stanleyville au lac Albert », l’autre « le fleuve Congo en aval et en amont de Nyangwe au lac Tanganyika ». En contrepartie de la construction de son réseau ferroviaire, la <i>Compagnie CFL</i> a reçu le monopole sur un domaine foncier, forestier et minier. C\'est toute province Orientale d\'alors qui constituait le domaine de la <i>Compagnie CFL</i>. Le territoire du pays Lega, le Bulega, sous l\'administration de l\'EIC se retrouve dans le district d\'abord puis dans la province Orientale et dans le domaine de la <i>Compagnie C.F.L</i></p>', '<p>Inspiré sur notre identité Chrétienne «DREAM OF DRC» A pour mandant d’encourager la population affectée, vulnérable et pauvre à prendre son destin en mains pour lutter contre la pauvreté en leur formant sur la technologie. Nous leur dotons de l’instruction, des formations et des moyens nécessaires, tout en favorisant leur implication au travail qui apporte le changement durable dans leur vie dans lequel ils sont affectés.&nbsp;&nbsp; Le travail de «DREAM OF DRC» à tout à faire avec le \"CHANGEMENT\" dans les vies de bénéficiaires et en particulier le groupe d’impact. (Femmes et enfants) ‘Autonomisation économique’ » et les jeunes oisifs ‘ Emploi’, une transversalité au cœur de toute la programmation de «DREAM OF DRC» en tant que start-up technologique.&nbsp;</p><p>Depuis 4 ans,&nbsp;DREAM OF DRC» organise ses activités afin de permettre le développement-socioéconomique, dont 4 secteurs ci-après :</p><ol><li>Promotion de TIC</li><li>Conception et développement des applications</li><li>Digital Marketing (web marketing)</li><li>Service de webmaster</li><li>Consultance informatique</li><li>Encadrement des jeunes et services humanitaires</li></ol><p>«DREAM OF DRC» croit bien que la technologie&nbsp; est un droit fondamental humain. Pour soutenir ce droit, comme start-up technologique voici ce que nous faisons.</p><p>• Nous formons la jeunesse en leur donnant des notions sur l\'informatique générale.</p><p>• «DREAM OF DRC» s’était engagée de travailler durablement à l’appui au système informatique là où le besoin existe, pour ce faire la start-up participe à la création des formations en informatique et partout en RDC, dans des villages ou zones reculées, territoires connus comme fragile où les capacités techniques, matérielles des structures d’offres de service de base de l’État/Gouvernement s’avèrent peu efficace ou inaccessible.</p><p>2.&nbsp;&nbsp;&nbsp;&nbsp; <strong>Notre Moyen de substance</strong>&nbsp;</p><p>Faire apprendre pour l\'avenir- Une seconde chance dans la vie&nbsp;</p><p>L’expertise de&nbsp;&nbsp;«DREAM OF DRC»&nbsp;se focalise sur l’appui à l’éducation des enfants et des jeunes qui ont raté l\'accès à l\'éducation. Il s’agit d’un appui au système de rattrapage scolaire, Les compétences en matière de l\'informatique, de la programmation informatique, les réseaux informatiques tous sont importants dans la vie.&nbsp;</p><p>Se concentre sur l\'intérêt et la protection des personnes concernées. L’aide est adaptée aux besoins des femmes, des filles, des garçons et des hommes et que la population ciblée est impliquée dans la prise de décision et la mise en œuvre.</p>', '<p><strong>Aidez-nous «DREAM OF DRC» à les aider à transformer ce monde&nbsp; par la technologie\"</strong></p><p>Ensemble, agissons pour Dream et le relèvement de nos communautés&nbsp; « Aidez-nous à les aider à agir» \"Qui sont-ils sont des jeunes vulnérables, ils sont affectées par l\'ignorance et manque d\'information sur la technologie et le numérique actuel, ils ont tout perdu, ils sont pauvre en informatique\"</p><p>Tous nos donateurs seront informés de l\'utilisation de leurs dons et recevront une copie de notre rapport annuel.</p><p>Merci d\'avance de votre soutien.</p><p><strong>COMMENT FAIRE UN DON</strong></p><p>Dons ouvrant droit à la réduction caritative d’impôt prévue par le dispositif fiscal, soit 30% dans les limites de 10% de votre revenu imposable.</p><ul><li>Je fais un don mensuel de :</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10$ (1,0$*)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20$(2,0$*)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Libre…... $&nbsp; &nbsp; &nbsp; &nbsp;</p><ul><li>Je fais un don ponctuel de :</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50$ (5,0$*)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100$(10,0$*)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Libre…... $</p><p>3.&nbsp;&nbsp;&nbsp;&nbsp; <strong>Détails financiers- Notre numéro bancaire</strong></p><p>(Mobile money)&nbsp; Compte Dollars USD</p><ul><li>&nbsp; m-pesa&nbsp;: +243817883541</li><li>&nbsp; Airtel-money: +243970524665</li><li>&nbsp; Orange-money: +243854543870</li></ul><p>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contacts</p><p>Veuillez contacter notre groupe, et secrétaire au Conseil d\'Administration</p><p>Tech Entrepreneur: Mr Roger Sumaili. à info@dreamofdrc.com ou sumailiroger681@gmail.com Afin que Vous puissiez prendre rendez-vous pour discuter des possibilités.</p><p>Tous nos donateurs seront informés de l\'utilisation de leurs dons et recevront une copie de notre rapport annuel d\'activité et une copie de rapport d\'audit financier annuel.</p>', '<p>«DREAM OF DRC»&nbsp; agit en esprit de solidarité avec les personnes en besoin, et reconnaît sa responsabilité de plaider en public et auprès des représentants pour ces personnes. Son partenaire c’est la communauté bénéficiaires, ce niveau de partenariat, renforce la collaboration et se fonde essentiellement 2 pratiques de changement, qui porte au-devant de la scène les problèmes des populations marginalisée :</p><ol><li>Le partenariat du pouvoir ou théorie «DES ELITES»: Relations avec les personnes influentes en travaillant directement avec ceux qui&nbsp; ont le pouvoir de prendre des décisions&nbsp;</li><li>Le partenariat avec la « BASE »: sont des recherches d’actions, les formations, le renforcement des capacités, la mobilisation communautaire, la sensibilisation le plaidoyer, la contestation sociale, la dénonciation des abus qui favorise l’action collective afin d’obtenir un changement social</li></ol>', '2022-01-29 19:14:06', '2022-10-20 16:06:02');
 
 -- --------------------------------------------------------
 
@@ -81,7 +81,8 @@ INSERT INTO `blogs` (`id`, `titre`, `description`, `photo`, `id_cat`, `slug`, `e
 (11, 'Le masque lukwakongo', '&lt;p&gt;Le nom &lt;i&gt;lukwakongo&lt;/i&gt; est une expression Lega qui signifie, en français, &quot;la mort rassemble&quot; / &quot;la mort fédère toutes les tendances&quot;. Par sa signification, ce masque renvoie à une célébration d\'un culte en mémoire d\'un défunts et des défunts. Tout Mulega aspire à devenir un ancêtre, c\'est-à-dire une icône pour les générations postérieures. Le masque &lt;i&gt;lukwakongo&lt;/i&gt; ne représente pas un ancêtre bien déterminé mais un ancêtre anonyme. L\'ancêtre a été un ancien (plein d\'expériences) par son âge, un savant (un connaisseur) de la science de son temps, un sage (une référence) de la société, une autorité (matérielle, spirituelle et politique), c\'est pourquoi la société l\'a gardé dans sa mémoire collective. La barbe du &lt;i&gt;lukwakongo&lt;/i&gt; symbolise l\'ancienneté (Bwaale ou Bwakale, Buulu ou Bukulu) et la sagesse (Itekesha) comme qualités du défunt. Le &lt;i&gt;lukwakongo&lt;/i&gt; symbolise le mwami défunt classé parmi les sages de la société. C\'est pourquoi il est associé à la mort et aux défunts.&lt;/p&gt;&lt;p&gt;Les masques &lt;i&gt;lukwakongo&lt;/i&gt;, comme tout le contenu de &lt;i&gt;masengo&lt;/i&gt; sont des propriétés individuelles des initiés ayant atteint le cinquième niveau (dans le Tata) et le sixième niveau (dans le malinga) du bwami. Les masques sont l\'héritage des grands initiés défunts dont ils évoquent le souvenir agréable, sans pour autant en être les portraits, L\'idée la plus importante est que les défunts ne sont pas vraiment morts, mais survivent au travers des masques qu\'ils ont laissés à leurs successeurs pour perpétuer les traditions. Les aphorismes qui leur sont associés et que les initiés prononcent au cours des rituels évoquent les principes moraux, spirituels et philosophiques du bwami. Les petits masques en bois ou &lt;i&gt;Lukwakongo&lt;/i&gt; mesurent qu\'une quinzaine de centimètres, ils ne sont donc pas portés directement sur le visage. Accrochés sur l\'épaule, ce sont des symboles, des insignes. Ils appartiennent aux initiés d\'un grade du Bwami. Durant les rituels, un type de masque plus grand était attaché à une barrière, entouré de petits masques &lt;i&gt;lukwakongo&lt;/i&gt; signifier l\'unité la cohésion des ancêtres dans l\'au-delà.&lt;/p&gt;', '1666102413.jpg', 1, 'le-masque-lukwak-ryj2tsog', 1, 4, '2022-10-18 12:13:33', '2022-10-18 12:13:43'),
 (12, 'Savoir sur le masque lega', '<p>Le mot <i>imangungu</i> (singulier) - <i>bimangungu</i> (pluriel) - signifie en français masque. Les masques Lega sont utilisés durant les rites initiatiques du bwami. Globalement les masques Lega se présentent sous deux formes: les grands masques et les petits masques. Les grands masques servent lors de certaines cérémonies pour voiler la face du porteur dans une incarnation d\'un rôle bien précis lors d\'une mise en scène durant les cérémonies initiatiques du bwami. Les petits masques sont portés sur les tempes, le front, l\'arrière de la tête ou tenus en main. Ils peuvent être suspendus généralement sur le <i>mutanga</i>, dénommé <i>La corde de la sagesse Lega</i> par <i>George Defour</i><a href=\"https://fr.wikipedia.org/wiki/Lega_(peuple)#cite_note-Du_Mutanga:_id%C3%A9oogrammes_de_la_soci%C3%A9t%C3%A9_Lega_%C2%AB_MondesFrancophones.com-12\">12</a> alignés ou entassés au sol. Les masques Lega se caractérisent surtout par la forme de leurs visages concave en forme de cœur.</p><p>Les masques sont des insignes de grade. Ils ne représentent pas un homme en particulier, mais l’homme dans son caractère universel. Les yeux ouverts et fendus, le nez vertical et fin, la bouche ouverte sont autant de caractéristiques propres à l’art Lega. Les masques sont souvent enduits de kaolin. La simplicité des formes et la sobriété dans les lignes donnent à ces masques toutes leur force et leur beauté. Les types de masques les plus courants sont: le masque <i>lukwakongo</i>, le masque <i>idimu</i>, le masque <i>lukungu</i>.</p>', '1666102931.jpg', 2, 'savoir-sur-le-ma-2a1dfh22', 1, 4, '2022-10-18 12:22:11', '2022-10-18 12:22:11'),
 (13, 'LE MULEGA,L\'HOMME DE LA TRADITION', '<p>Depuis 2008, le Centre Culturel Lega ne ménage aucun effort pour accroître la promotion des valeurs culturelles lega. Dans cette perspective, nous avons décidé de numériser «&nbsp;LE MULEGA, L’HOMME DE LA TRADITION&nbsp;»&nbsp;; cet ouvrage écrit en 1982 par l’Abbé Charles BILEMBO et qui, à notre connaissance, est resté peu accessible à plusieurs lecteurs qui souhaiteraient en découvrir le contenu et élargir leur champ de connaissance sur le peuple Lega.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nous avouons avec modestie que le manuscrit à notre <a href=\"http://centreculturellega.centerblog.net/possession.htm\">possession</a> avait certaines imperfections&nbsp;: pages manquantes, quelques références bibliographiques incomplètes, etc. Nous le signalons dans le corps du texte.</p><p>C’est pourquoi, à l’instar de l’auteur, nous serons heureux de recevoir des lecteurs des notes complémentaires des remarques, des rectifications et des critiques constructives car les Balega disent&nbsp;:&nbsp;«&nbsp;<i>Mutangi akitile abutwa, nu nsunguzi alinga abutwa</i>&nbsp;». (Tout homme a besoin de conseils&nbsp;: du choc des idées jaillit la lumière).</p>', '1666103238.jpg', 2, 'le-mulega,l-homm-qu3w76yl', 1, 4, '2022-10-18 12:27:18', '2022-10-18 12:27:18'),
-(14, 'Château du Puiset', '<p>Le château du Puiset est un ancien château fort, du xie siècle, qui se dresse sur l\'ancienne commune du Puiset au sein de la commune nouvelle de Janville-en-Beauce dans le département d\'Eure-et-Loir, en région Centre-Val de Loire. SituationLes ruines du château sont situés à proximité nord ...</p>', '1666103431.jpg', 4, 'chateau-du-puis-r23ftw01', 1, 4, '2022-10-18 12:30:31', '2022-10-18 12:30:31');
+(14, 'Château du Puiset', '&lt;p&gt;Le château du Puiset est un ancien château fort, du xie siècle, qui se dresse sur l\'ancienne commune du Puiset au sein de la commune nouvelle de Janville-en-Beauce dans le département d\'Eure-et-Loir, en région Centre-Val de Loire. SituationLes ruines du château sont situés à proximité nord ...&lt;/p&gt;', '1666103431.jpg', 4, 'chateau-du-puis-b5r1xjid', 1, 4, '2022-10-18 12:30:31', '2022-10-20 13:32:23'),
+(15, 'Apprendre le sdk flutter', '&lt;ul&gt;&lt;li&gt;Readme&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://pub.dev/packages/flutter_map/changelog&quot;&gt;Changelog&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://pub.dev/packages/flutter_map/example&quot;&gt;Example&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://pub.dev/packages/flutter_map/install&quot;&gt;Installing&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://pub.dev/packages/flutter_map/versions&quot;&gt;Versions&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://pub.dev/packages/flutter_map/score&quot;&gt;Scores&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h2&gt;flutter_map&lt;/h2&gt;&lt;p&gt;A versatile mapping package for Flutter, based off of &lt;a href=&quot;https://leafletjs.com/&quot;&gt;\'leaflet.js\'&lt;/a&gt;. Simple and easy to learn, yet completely customizable and configurable, it\'s the best choice for mapping in your Flutter app.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://pub.dev/packages/flutter_map&quot;&gt;&lt;img src=&quot;https://img.shields.io/pub/v/flutter_map.svg?label=Latest+Version&quot; alt=&quot;Pub.dev&quot;&gt;&lt;/a&gt; &lt;a href=&quot;https://github.com/fleaflet/flutter_map/actions?query=branch%3Amaster&quot;&gt;&lt;img src=&quot;https://badgen.net/github/checks/fleaflet/flutter_map?label=Checks+%26+Tests&amp;amp;color=orange&quot; alt=&quot;Checks &amp;amp; Tests&quot;&gt;&lt;/a&gt; &lt;a href=&quot;https://pub.dev/packages/flutter_map/score&quot;&gt;&lt;img src=&quot;https://img.shields.io/pub/points/flutter_map?logo=flutter&quot; alt=&quot;points&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/fleaflet/flutter_map/stargazers&quot;&gt;&lt;img src=&quot;https://badgen.net/github/stars/fleaflet/flutter_map?label=stars&amp;amp;color=green&amp;amp;icon=github&quot; alt=&quot;stars&quot;&gt;&lt;/a&gt; &lt;a href=&quot;https://pub.dev/packages/flutter_map/score&quot;&gt;&lt;img src=&quot;https://img.shields.io/pub/likes/flutter_map?logo=flutter&quot; alt=&quot;likes&quot;&gt;&lt;/a&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;a href=&quot;https://github.com/fleaflet/flutter_map/issues&quot;&gt;&lt;img src=&quot;https://badgen.net/github/open-issues/fleaflet/flutter_map?label=Open+Issues&amp;amp;color=green&quot; alt=&quot;Open Issues&quot;&gt;&lt;/a&gt; &lt;a href=&quot;https://github.com/fleaflet/flutter_map/pulls&quot;&gt;&lt;img src=&quot;https://badgen.net/github/open-prs/fleaflet/flutter_map?label=Open+PRs&amp;amp;color=green&quot; alt=&quot;Open PRs&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;https://discord.gg/egEGeByf4q&quot;&gt;Discord Server&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Join the Discord server: &lt;a href=&quot;https://discord.gg/egEGeByf4q&quot;&gt;https://discord.gg/egEGeByf4q&lt;/a&gt;!&lt;/p&gt;&lt;p&gt;Talk about \'flutter_map\', get and give help, and receive notifications about new \'flutter_map\' updates! More additions planned in the future.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;https://docs.fleaflet.dev/&quot;&gt;Documentation&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Visit the &lt;a href=&quot;https://docs.fleaflet.dev/&quot;&gt;documentation website here&lt;/a&gt;, for all information about how to use this library, including setup and usage instructions.&lt;/p&gt;&lt;p&gt;Some documentation is also provided within the code and can be view inside your favourite editor. These docs are also over at the &lt;a href=&quot;https://pub.dev/documentation/flutter_map/latest/flutter_map/flutter_map-library.html&quot;&gt;pub.dev package&lt;/a&gt;, and can be viewed from within your favourite editor.&lt;/p&gt;', '1666464202.png', 2, 'apprendre-le-sdk-w7ker0u7', 1, 12, '2022-10-22 16:43:22', '2022-10-22 16:58:07');
 
 -- --------------------------------------------------------
 
@@ -175,7 +176,8 @@ CREATE TABLE `contact_infos` (
 --
 
 INSERT INTO `contact_infos` (`id`, `name`, `email`, `telephone`, `subject`, `message`, `created_at`, `updated_at`) VALUES
-(1, 'roger sumaili', 'patrona@gmail.com', '+243817883541', 'salutation', 'Bonjour', '2022-10-19 10:08:05', '2022-10-19 10:08:18');
+(1, 'roger sumaili', 'patrona@gmail.com', '+243817883541', 'salutation', 'Bonjour', '2022-10-19 10:08:05', '2022-10-19 10:08:18'),
+(3, 'sefu', 'sefu@gmail.com', '0817883541', 'salutation', 'bonjour les boss', '2022-10-20 18:24:37', '2022-10-20 18:24:37');
 
 -- --------------------------------------------------------
 
@@ -390,6 +392,35 @@ INSERT INTO `link_canvas_deuxes` (`id`, `id_coach`, `ceo`, `titre`, `message`, `
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `localisations`
+--
+
+CREATE TABLE `localisations` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `name` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `adress` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `city` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `state` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `hours` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `latitude` decimal(8,6) NOT NULL,
+  `longitude` decimal(9,6) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `localisations`
+--
+
+INSERT INTO `localisations` (`id`, `user_id`, `name`, `adress`, `city`, `state`, `hours`, `latitude`, `longitude`, `created_at`, `updated_at`) VALUES
+(1, 4, 'Goma Keshero', 'Santé mantale', 'Goma', 'RDcongo', '9:00am-6:00pm', '29.187261', '-1.655107', '2022-10-21 19:57:36', '2022-10-21 19:58:11'),
+(2, 4, 'Goma Keshero', 'Santé mantale', 'Goma', 'RDcongo', '9:00am-6:00pm', '29.187599', '-1.655418', '2022-10-07 19:57:52', '2022-10-21 19:58:17'),
+(3, 4, 'Stade des freres de la charité(charity park stadium)', 'Stade des freres', 'Goma', 'RDcongo', '10:00am-4:00pm', '29.188271', '-1.655540', '2022-10-21 19:58:02', '2022-10-21 19:58:22');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `messages`
 --
 
@@ -472,7 +503,14 @@ INSERT INTO `messages` (`id`, `user_id`, `message`, `created_at`, `updated_at`, 
 (87, 4, NULL, '2022-10-18 10:41:41', '2022-10-18 10:41:41', NULL, '1666096901.svg'),
 (88, 4, NULL, '2022-10-18 10:41:43', '2022-10-18 10:41:43', NULL, NULL),
 (89, 4, NULL, '2022-10-18 10:41:55', '2022-10-18 10:41:55', NULL, '1666096915.png'),
-(90, 4, 'hi', '2022-10-18 10:41:59', '2022-10-18 10:41:59', NULL, NULL);
+(90, 4, 'hi', '2022-10-18 10:41:59', '2022-10-18 10:41:59', NULL, NULL),
+(91, 4, 'ok', '2022-10-20 07:35:31', '2022-10-20 07:35:31', 21, NULL),
+(92, 3, 'Bonjour', '2022-10-22 17:11:20', '2022-10-22 17:11:20', 4, NULL),
+(93, 4, 'oui bonjour ni sawa?😷', '2022-10-22 17:12:30', '2022-10-22 17:12:30', 3, NULL),
+(94, 3, 'ndiyo boss', '2022-10-22 17:13:17', '2022-10-22 17:13:17', 4, NULL),
+(95, 4, 'd\'accord!', '2022-10-22 17:13:40', '2022-10-22 17:13:40', 3, NULL),
+(96, 4, 'd\'accord!', '2022-10-22 17:14:06', '2022-10-22 17:14:06', 3, NULL),
+(97, 3, 'Bonjour !', '2022-10-22 17:17:10', '2022-10-22 17:17:10', 14, NULL);
 
 -- --------------------------------------------------------
 
@@ -527,7 +565,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (42, '2022_01_31_083252_create_blogs_table', 30),
 (43, '2022_10_19_082855_create_territoires_table', 31),
 (44, '2022_09_03_181439_create_contact_infos_table', 32),
-(45, '2022_09_04_212957_create_carousels_table', 33);
+(45, '2022_09_04_212957_create_carousels_table', 33),
+(46, '2022_10_19_173744_create_textos_table', 34),
+(47, '2022_10_21_192257_create_localisations_table', 35),
+(48, '2022_10_22_121016_create_reunions_table', 36);
 
 -- --------------------------------------------------------
 
@@ -756,6 +797,43 @@ INSERT INTO `provinces` (`id`, `idPays`, `nomProvince`, `created_at`, `updated_a
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `reunions`
+--
+
+CREATE TABLE `reunions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `nom` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `start_date` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `end_date` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `hours` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `reunions`
+--
+
+INSERT INTO `reunions` (`id`, `user_id`, `nom`, `slug`, `start_date`, `end_date`, `hours`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Réunion 1', 'reunion-1-ys3qtseh', '2022-10-22', '2022-10-22', '15:39', '2022-10-22 11:39:41', '2022-10-22 11:39:41'),
+(2, 6, 'Réunion 1', 'reunion-1-iwwww5ie', '2022-10-22', '2022-10-22', '15:39', '2022-10-22 11:39:41', '2022-10-22 11:43:05'),
+(3, 7, 'Réunion 1', 'reunion-1-ys3qtseh', '2022-10-22', '2022-10-22', '15:39', '2022-10-22 11:39:41', '2022-10-22 11:39:41'),
+(4, 21, 'Prise de contact', 'prise-de-contact-k214n8lx', '2022-10-23', '2022-10-25', '16:40', '2022-10-22 11:40:13', '2022-10-22 11:40:13'),
+(5, 15, 'Prise de contact', 'prise-de-contact-k214n8lx', '2022-10-23', '2022-10-25', '16:40', '2022-10-22 11:40:13', '2022-10-22 11:40:13'),
+(6, 14, 'Prise de contact', 'prise-de-contact-k214n8lx', '2022-10-23', '2022-10-25', '16:40', '2022-10-22 11:40:13', '2022-10-22 11:40:13'),
+(7, 13, 'Prise de contact', 'prise-de-contact-k214n8lx', '2022-10-23', '2022-10-25', '16:40', '2022-10-22 11:40:13', '2022-10-22 11:40:13'),
+(8, 4, 'Prise de contact', 'prise-de-contact-k214n8lx', '2022-10-23', '2022-10-25', '16:40', '2022-10-22 11:40:13', '2022-10-22 11:40:13'),
+(9, 4, 'Evaluation de la caisse', 'evaluation-de-la-4fnm9wta', '2022-10-22', '2022-10-22', '17:41', '2022-10-22 11:41:19', '2022-10-22 11:41:19'),
+(12, 4, 'Prise de parole', 'prise-de-parole-rrqkmtlq', '2022-10-29', '2022-10-30', '16:41', '2022-10-22 11:41:57', '2022-10-22 11:41:57'),
+(13, 7, 'Prise de parole', 'prise-de-parole-rrqkmtlq', '2022-10-29', '2022-10-30', '16:41', '2022-10-22 11:41:57', '2022-10-22 11:41:57'),
+(14, 12, 'Conference', 'conference-iuaok31k', '2022-10-22', '2022-10-22', '20:00', '2022-10-22 16:00:28', '2022-10-22 16:00:28'),
+(15, 3, 'flutter', 'flutter-vllp90vn', '2022-10-22', '2022-10-22', '22:31', '2022-10-22 17:31:31', '2022-10-22 17:31:31');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `roles`
 --
 
@@ -860,7 +938,7 @@ CREATE TABLE `sites` (
 --
 
 INSERT INTO `sites` (`id`, `nom`, `description`, `email`, `adresse`, `tel1`, `tel2`, `tel3`, `token`, `about`, `mission`, `objectif`, `politique`, `condition`, `logo`, `facebook`, `linkedin`, `twitter`, `youtube`, `created_at`, `updated_at`) VALUES
-(2, 'Bulega', 'Bulega est une plateforme web d\'identifications des personnes Legas dans l\'échel planétaire', 'info@bulega.org', 'Goma, quartier des volcans', '+243818472003', '+243971681767', '+243843044444', 'XYH34d258jhgd0Tdn', NULL, 'L’accès à des services professionnels de développement des start-ups, en particulier l’accélération, est\nune étape très importante pour les start-ups. Trouver la bonne structure, au bon endroit et au bon prix\nest crucial et pourtant la procédure la plus difficile. De plus, plus de 75% des jeunes entreprises dans la\nphase initiale de leur aventure entrepreneuriale s&#39;effondrent en RDC.\nAinsi, le Hub UJN en partenariat avec le Laboratoire d’Accélération du PNUD compte encourager la\nmentalité d&#39;innovation entrepreneuriale, stimuler la croissance économique, et créer des emplois\ndécents (ODD 8) afin de contribuer à la réduction de la pauvreté (ODD 1) en République Démocratique\ndu Congo, mais aussi dans le but de renforcer les capacités en innovation des porteurs des solutions\nretenus sur Goma, Beni et Kisangani, le programme prévoit d’organiser un Boot camp pour une durée\nde 2 semaines.', 'Objectif global : Organiser un boot camp à Goma en faveur des 15 porteurs des solutions innovantes\nretenus dans le cadre du projet JINNOV pour la phase de l’expérimentation.\nObjectifs spécifiques :\n- Améliorer les connaissances entrepreneuriales des 15 jeunes entrepreneurs en leurs donnant des\nformations sur les thèmes : Design Thinking, Discipline entrepreneurship, Anthropologie, les 7\nHabitudes des gens qui réussissent ce qu’ils entreprennent pendant les 2 semaines ;\n- Expérimenter les 15 solutions proposées par les jeunes entrepreneurs ;\n- Amener les 15 jeunes entrepreneurs porteurs des solutions à atteindre leurs objectifs entrepreneurials ;\n- Perfectionner le business Plan des 15 jeunes porteurs des solutions ;\n3. Résultats attendus\n- 15 porteurs de solutions sont formés au travers du Boot Camp à Goma ;\n- 15 jeunes entrepreneurs sont coachés ;\n- 15 porteurs des solutions font l’expérimentations de leurs projets ;\n- 15 porteurs des solutions pitchent leurs projets.\n- 15 porteurs des solutions ont un BP mis à jour après l’expérimentation ;\n4. Méthodologie\n- Exposé court sur la théorie générale relative à la matière ;\n- Échanges pratiques, réception du feed-back des apprenants et Exposés des projets par les\napprenants ;\n- Descente pour expérimentation.\n5. Lieu et durée :\nGoma Pendant 2 semaines', 'la politique', 'notre condition', 'site.jpg', 'https://web.facebook.com/Dream-of-drc-114107447382924', 'https://www.linkedin.com/in/dream-of-drc-startup-872765217/', 'https://twitter.com/drc_dream', 'https://youtube.com/', '2022-01-29 13:53:28', '2022-10-19 07:04:53');
+(2, 'Bulega', 'Bulega est une plateforme web d\'identifications des personnes Legas dans l\'échel planétaire', 'info@bulega.org', 'Goma, quartier des volcans', '+243818472003', '+243971681767', '+243970524665', 'Mi0JE6VGyEsCp0RIFlzeQS1awtzb', NULL, 'L’accès à des services professionnels de développement des start-ups, en particulier l’accélération, est\nune étape très importante pour les start-ups. JINNOV pour la phase de l’expérimentation.', 'Objectif global : Organiser un boot camp à Goma en faveur des 15 porteurs des solutions innovantes\nretenus dans le cadre du projet JINNOV pour la phase de l’expérimentation.', 'la politique', 'notre condition', 'site.jpg', 'https://web.facebook.com/Dream-of-drc-114107447382924', 'https://www.linkedin.com/in/dream-of-drc-startup-872765217/', 'https://twitter.com/drc_dream', 'https://youtube.com/', '2022-01-29 13:53:28', '2022-10-22 22:03:26');
 
 -- --------------------------------------------------------
 
@@ -961,7 +1039,7 @@ INSERT INTO `teams` (`id`, `nom`, `email`, `titre`, `biographie`, `photo`, `etat
 (3, 'Wilson vulembere', 'willsonantoine@gmail.com', 'I.T.I, Développeur', 'I.T.I, Développeur || Directeur et fondateur de Mlinzi Corporation', '1666175761.jpg', 1, 'https://www.linkedin.com/in/cedryson-vulembere-368a76ba/', 'linkedin.com/in/cedryson-vulembere-368a76ba', '', '+243990084881', '2022-07-13 11:17:05', '2022-10-19 08:36:01'),
 (4, 'sumaili shabani roger', 'sumailiroger681@gmail.com', 'Fullstack developer', 'Techentrepreneur #ceo et fondateur de dream of drc sarl. apporteur de solutions numériques de la nouvelle technologie.', '1666175467.jpg', 1, 'https://web.facebook.com/patronat.shabanisumaili.9', 'linkedin.com/in/sumaili-shabani-roger-patrôna-7426a71a1', 'https://twitter.com/RogerPatrona', '+243817883541', '2022-07-13 11:19:07', '2022-10-19 08:31:07'),
 (5, 'Chris Ayale ', 'ayale.chris@gmail.com', 'Responsable de l\'organisation', 'Fondateur et Ceo de l\'entreprise KivuGreen Corporation', '1666174477.jpg', 1, '', 'linkedin.com/in/chris-ayale-866458154', 'https://twitter.com/AyaleChris', '+243823268000', '2022-07-13 11:19:45', '2022-10-19 08:14:37'),
-(7, 'Lucien (Delalune) Azmayawa', 'lucienazmayawa@gmail.com', 'Directeur de fabrique chez Goma Digital Academy', 'Directeur de fabrique chez Goma Digital Academy', '1666174304.jpg', 1, 'https://web.facebook.com/bernard.m.tshienda', 'https://www.linkedin.com/in/bernard-malaba-tshienda-3905575a/', 'https://twitter.com/bmtshienda', '+243818472003', '2022-07-13 11:25:59', '2022-10-19 08:11:44');
+(7, 'Lucien (Delalune) Azmayawa', 'lucienazmayawa@gmail.com', 'Directeur de fabrique chez Goma Digital Academy', 'Directeur de fabrique chez Goma Digital Academy', '1666174304.jpg', 1, 'https://web.facebook.com/lucien.azmayawa', 'https://www.linkedin.com/in/lucien-azmayawa-35041b14a/', '', '+243818472003', '2022-07-13 11:25:59', '2022-10-20 17:53:07');
 
 -- --------------------------------------------------------
 
@@ -985,6 +1063,29 @@ INSERT INTO `territoires` (`id`, `nomTerritoire`, `created_at`, `updated_at`) VA
 (2, 'Shabunda', '2022-10-19 06:53:26', '2022-10-19 06:53:26'),
 (3, 'Pangi', '2022-10-19 06:53:34', '2022-10-19 06:53:34'),
 (4, 'Walikale', '2022-10-19 06:53:41', '2022-10-19 06:53:41');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `textos`
+--
+
+CREATE TABLE `textos` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `phone` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `message` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `etat` int(11) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `textos`
+--
+
+INSERT INTO `textos` (`id`, `phone`, `message`, `etat`, `created_at`, `updated_at`) VALUES
+(7, '+243970524665', 'bonjour', 1, '2022-10-22 22:06:18', '2022-10-22 22:06:18'),
+(8, '+243970524665', 'Bonne nuit message de sommeil', 1, '2022-10-22 22:16:02', '2022-10-22 22:16:02');
 
 -- --------------------------------------------------------
 
@@ -1030,32 +1131,39 @@ CREATE TABLE `users` (
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `active` int(11) DEFAULT 0
+  `active` int(11) DEFAULT 1,
+  `territoire` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `chefferie` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `groupement` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `telephone`, `adresse`, `avatar`, `sexe`, `id_role`, `remember_token`, `created_at`, `updated_at`, `active`) VALUES
-(1, 'user one', 'user@gmail.com', NULL, '$2y$10$a5FWP6l2FpvD8g2QcL0XAOYGOm05RCW5BcLpaSZ9RJtufRce3nlze', '+243817883541', 'Goma quartier himbi', '1643296973.webp', 'F', 2, 'Vq82sED4amcmdUNxk0u6W8HPuQknceQwsz2NobvwCDCrhmhGnMggU5WjQU0V', NULL, '2022-02-03 05:37:59', 1),
-(2, 'user2', 'user2@gmail.com', NULL, '$2y$10$wn9c0j9xzMVMhpYZLAL8Cu0b9eZN3QebdSMOIjE4DNngwJxy/owI.', NULL, NULL, '1643296833.jpg', 'M', 2, '$2y$10$Tug/E8koDG.xEw3M.DluA.3hfS1ugnEH6WzbXxHVDbBk.JDdT/0Ha', NULL, '2022-01-27 13:20:33', 1),
-(3, 'member', 'member@gmail.com', NULL, '$2y$10$2sZHAUEDtc79UiH/6PMBe.Mf7W4h2x.hG9vfUZ3HQiVZbFP//TEFK', NULL, NULL, '1643296874.jpg', 'M', 3, 'TDEVjRNM24nSyszHe7zFfrmMYaBQafwBCZlUMypV8RkQ8R4NMqRGDyyk1UcE', NULL, '2022-01-27 13:21:14', 1),
-(4, 'administrateur lega', 'admin@gmail.com', NULL, '$2y$10$V0FmIG6fab5a1wxmwcwFUuHK5h.9SWChmP1LFXZ2676CCKnVeH1eG', '+243817883541', 'Goma, Katoyi', '1643812713.jpg', 'M', 1, 'rqAp1KcnvgOgwMVYSsZP34XOgjFwKYJ9GkFBbo3G31BLYaZRUkjHf9ZatKfN', NULL, '2022-10-18 12:15:48', 1),
-(6, 'jojo', 'jojo@gmail.com', NULL, '$2y$10$aoWHyUaAEAjYsTALtxLksun/nYYQ9ylT9t5MRKvN.mQcJ48tUIJqG', '0817883541', 'goma katoyi', '1643296735.jpg', 'M', 2, '$2y$10$xZ0BLZRaYcKn7ZI5F59IeeVlxTtbaFOYiyEfNmOH1TE86D7DR/Jw.', NULL, '2022-01-27 13:18:55', 1),
-(7, 'joel', 'joel@gmail.com', NULL, '$2y$10$IAEW8G7YBNcYPz.rIBVuz.EPkRmpCg6j8Nf2S3LcKUwSPinYAQN7y', '0970524665', 'Goma Ndosho', '1643297170.jpg', 'M', 3, 'ag6cmnntycjMnrJulnZG2MySY9iGEEhZRe5wSiMxfXwdhVB3ZF89xQAokAx9', '2022-01-27 13:14:47', '2022-01-27 13:26:32', 1),
-(9, 'jonathan kambere', 'jonathan@gmail.com', NULL, '$2y$10$rAACs28vmfFg/sbDKOSG1.rLuhhKU/uFKbOpwcy3nSpkPIsp8w6j6', '+243817883541', 'goma himbi', '1654038836.jpg', 'M', 2, '$2y$10$b.uaphKq66QNCnp7vyVxxO3LZ9rFMSs/guRkbl0y1g2ySqOrODcsS', NULL, '2022-05-31 19:13:56', 1),
-(10, 'Victor shukuru', 'victor@gmail.com', NULL, '$2y$10$HJfYk412uUod4fy/F.n/s.oOSVzGfxtws8pnEP/0hS9pKaVM7Mk6.', '0823456789', 'Goma', 'avatar.png', 'M', 2, '$2y$10$B61dMeAbZt0X7Ozq2c1Wve5PSemP2SRVCO10VO9fOxHocL/hrUkdm', NULL, NULL, 1),
-(11, 'Roger sumaili', 'sumailiroger681@gmail.com', NULL, '$2y$10$49XVZ3daXANHE2VrjqetJONl5P4wIb/WS5lpoHW4zuG2K7umH.tiC', '+243970524665', 'Goma', '1654038823.jpg', 'M', 2, 'Jd1TJv0YIRiszakK4mAIwSkBOfyC7dmELoZvNXmqcUT25oAsX1IlvQE57WlT', NULL, '2022-05-31 19:13:44', 1),
-(12, 'Benit bahati', 'benitbahati@gmail.com', NULL, '$2y$10$UVVQBLvvqgzuOcujjeE6AOpge84Rx8WZJMixCArUB5SJ1fUdpLBpu', '+142857823567', 'Goma', '1654038789.jpg', 'M', 2, '$2y$10$DvAHs0GxDATht5k542jcte9qqE0LYntoqYyXrW3VvGN2HezjI75y.', NULL, '2022-05-31 19:13:09', 1),
-(13, 'Pionde bin sefu', 'pionde@gmail.com', NULL, '$2y$10$nfkWVY2tDFbjg49bfE/Fnehxfrs/vGg.MBar76Gp8QEKw3i/exa1y', '+243817883541', 'Kisangani', '1654038894.jpg', 'M', 2, '$2y$10$ivR38s3LhmBwwe1JhkMjM.uFRC/uSp0k6edq.F8qOo32HdF.I79PW', NULL, '2022-05-31 19:14:54', 1),
-(14, 'Elégance daula', 'elgadaula@gmail.com', NULL, '$2y$10$wUhtw.5bdY64Z8ysYKVq6.C0AvXei1ee45nl0iwcArjuDh9cMZk.q', '+243816234903', 'Kisangani', '1654038776.jpg', 'F', 2, '$2y$10$Pb/ItzClgKbqYTVGCcwpOe9OJRr7h2N.eWfnAvKOl9Ead1Sdbm5IO', NULL, '2022-05-31 19:12:56', 1),
-(15, 'john smith', 'johnsmith@gmail.com', NULL, '$2y$10$7TYio3TjCaK1vfO43sdVwe1yCg.uyBTODfUkuL.6eKlEOBIRczCfW', '+243817883541', 'Beni', '1654038767.jpg', 'M', 2, '$2y$10$Ct/fL6sUQmMDW8CygIx2fuE4WsVjvjlfX2s9gyASjCgv0lG2iV3Ka', NULL, '2022-05-31 19:16:58', 1),
-(16, 'jojo kahembe', 'jojo@gmail.com', NULL, '$2y$10$xTXaFvYC2LTU.oDnvMXqquAyal6H7.l/WJmFhnKEKvy1N5WSOk/2O', NULL, NULL, 'avatar.png', 'M', 2, '$2y$10$j9lYKwSc4p1rI4U0sQTOGOauFtRATzmNmwqIUu0cuHAtdazpCKpSS', NULL, NULL, 0),
-(17, 'Patrick ombeni', 'patrick@gmail.com', NULL, '$2y$10$uAKvBshLnpTli5TGrP9A0uXmZl.UzJ1FRut5uEEa6MyYqKptleQRa', NULL, NULL, '1655789076.jpg', 'M', 2, '$2y$10$IVo.bNSnPgyq.6rFzUxhPOZ1xAmvuD6T3xc3JcJEgtj/O8aYWejfa', NULL, '2022-06-21 03:24:36', 0),
-(18, 'jonathan dufina', 'jonathan12@gmail.com', NULL, '$2y$10$k.atrYUfNHhUqXu5kuoHye4Ibitvgyit0o.vCpdre8RS15FNd0wiW', NULL, NULL, '1655788876.jpg', 'M', 2, '$2y$10$5Jg6nldOfetBkxocGACXB.64YRg4/TYN5zUEg8hAVBBfj0RQrR5Oa', NULL, '2022-06-21 03:21:16', 1),
-(19, 'jonathan board', 'grafikart@gmail.com', NULL, '$2y$10$rMtRJDBgQX5gRX1OlrrI1OOn/lfTFcxj6T7WSVAeI1i6bALMbEYFO', NULL, NULL, 'avatar.png', 'M', 2, '$2y$10$L8apYY7zQ64rrYpAijRla.TOvGYufvq9TrO7foJ.wNN4KXBIiumV6', NULL, NULL, 0),
-(21, 'Pionde bien sefu', 'piondesefu123@gmail.com', NULL, '$2y$10$89Lsat0OoFMzXsp04EuxzeQc5xQIOQ774s51v/CPA6XzSxVju2wqu', '0817883541', 'Goma himbi', 'avatar.png', 'M', 2, '$2y$10$juF6VS0CxhueOWjyFyqMneyyndS1ro7iImVQPExJS8z46zEScTMjW', NULL, '2022-10-17 21:53:39', 1);
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `telephone`, `adresse`, `avatar`, `sexe`, `id_role`, `remember_token`, `created_at`, `updated_at`, `active`, `territoire`, `chefferie`, `groupement`) VALUES
+(1, 'user one', 'user@gmail.com', NULL, '$2y$10$a5FWP6l2FpvD8g2QcL0XAOYGOm05RCW5BcLpaSZ9RJtufRce3nlze', '+243970524665', 'Goma quartier himbi', '1643296973.webp', 'F', 2, 'Vq82sED4amcmdUNxk0u6W8HPuQknceQwsz2NobvwCDCrhmhGnMggU5WjQU0V', NULL, '2022-10-22 21:29:33', 1, NULL, NULL, NULL),
+(2, 'user2', 'user2@gmail.com', NULL, '$2y$10$wn9c0j9xzMVMhpYZLAL8Cu0b9eZN3QebdSMOIjE4DNngwJxy/owI.', NULL, NULL, '1643296833.jpg', 'M', 2, '$2y$10$Tug/E8koDG.xEw3M.DluA.3hfS1ugnEH6WzbXxHVDbBk.JDdT/0Ha', NULL, '2022-01-27 13:20:33', 1, NULL, NULL, NULL),
+(3, 'member', 'member@gmail.com', NULL, '$2y$10$2sZHAUEDtc79UiH/6PMBe.Mf7W4h2x.hG9vfUZ3HQiVZbFP//TEFK', NULL, NULL, '1643296874.jpg', 'M', 3, 'jvvRM1qoPXze1f020d0du7PGmKTFsJadzw6xijJ8KauMTVHrSeCrWnNKy2Sb', NULL, '2022-01-27 13:21:14', 1, NULL, NULL, NULL),
+(4, 'administrateur lega', 'admin@gmail.com', NULL, '$2y$10$V0FmIG6fab5a1wxmwcwFUuHK5h.9SWChmP1LFXZ2676CCKnVeH1eG', '+243817883541', 'Goma, Katoyi', '1643812713.jpg', 'M', 1, 'VEdkI3MyQBasqSSwdBH8ciTkfBbW1yhTlxPeHBdj8bCzhho176tZWJrjbaDe', NULL, '2022-10-22 22:54:59', 1, 'Pangi', 'kambene', 'kalima'),
+(6, 'jojo', 'jojo@gmail.com', NULL, '$2y$10$aoWHyUaAEAjYsTALtxLksun/nYYQ9ylT9t5MRKvN.mQcJ48tUIJqG', '0817883541', 'goma katoyi', '1643296735.jpg', 'M', 2, '$2y$10$xZ0BLZRaYcKn7ZI5F59IeeVlxTtbaFOYiyEfNmOH1TE86D7DR/Jw.', NULL, '2022-01-27 13:18:55', 1, NULL, NULL, NULL),
+(7, 'joel', 'joel@gmail.com', NULL, '$2y$10$IAEW8G7YBNcYPz.rIBVuz.EPkRmpCg6j8Nf2S3LcKUwSPinYAQN7y', '0970524665', 'Goma Ndosho', '1643297170.jpg', 'M', 3, 'ag6cmnntycjMnrJulnZG2MySY9iGEEhZRe5wSiMxfXwdhVB3ZF89xQAokAx9', '2022-01-27 13:14:47', '2022-01-27 13:26:32', 1, NULL, NULL, NULL),
+(9, 'jonathan kambere', 'jonathan@gmail.com', NULL, '$2y$10$rAACs28vmfFg/sbDKOSG1.rLuhhKU/uFKbOpwcy3nSpkPIsp8w6j6', '+243817883541', 'goma himbi', '1654038836.jpg', 'M', 2, '$2y$10$b.uaphKq66QNCnp7vyVxxO3LZ9rFMSs/guRkbl0y1g2ySqOrODcsS', NULL, '2022-05-31 19:13:56', 1, NULL, NULL, NULL),
+(10, 'Victor shukuru', 'victor@gmail.com', NULL, '$2y$10$HJfYk412uUod4fy/F.n/s.oOSVzGfxtws8pnEP/0hS9pKaVM7Mk6.', '0823456789', 'Goma', 'avatar.png', 'M', 2, '$2y$10$B61dMeAbZt0X7Ozq2c1Wve5PSemP2SRVCO10VO9fOxHocL/hrUkdm', NULL, NULL, 1, NULL, NULL, NULL),
+(11, 'Roger sumaili', 'sumailiroger681@gmail.com', NULL, '$2y$10$49XVZ3daXANHE2VrjqetJONl5P4wIb/WS5lpoHW4zuG2K7umH.tiC', '+243817883541', 'Goma', '1654038823.jpg', 'M', 2, 'kWfR03lTsmWUXcLUKn84Q7bvBRt6mJDEkeFgOf44qR9UBxG7fVmcLPZuI9mz', NULL, '2022-10-19 18:12:48', 1, NULL, NULL, NULL),
+(12, 'Benit bahati', 'benitbahati@gmail.com', NULL, '$2y$10$UVVQBLvvqgzuOcujjeE6AOpge84Rx8WZJMixCArUB5SJ1fUdpLBpu', '+142857823567', 'Goma', '1654038789.jpg', 'M', 2, 'LBDdxGhZ2TIXQ4yKGNC8oHyIhuvDPgxNZRpkq3Qe4mD3C3NxxvA5DixQUVCs', NULL, '2022-05-31 19:13:09', 1, NULL, NULL, NULL),
+(13, 'Pionde bin sefu', 'pionde@gmail.com', NULL, '$2y$10$nfkWVY2tDFbjg49bfE/Fnehxfrs/vGg.MBar76Gp8QEKw3i/exa1y', '+243817883541', 'Kisangani', '1654038894.jpg', 'M', 2, '$2y$10$ivR38s3LhmBwwe1JhkMjM.uFRC/uSp0k6edq.F8qOo32HdF.I79PW', NULL, '2022-05-31 19:14:54', 1, NULL, NULL, NULL),
+(14, 'Elégance daula', 'elgadaula@gmail.com', NULL, '$2y$10$wUhtw.5bdY64Z8ysYKVq6.C0AvXei1ee45nl0iwcArjuDh9cMZk.q', '+243816234903', 'Kisangani', '1654038776.jpg', 'F', 2, '$2y$10$Pb/ItzClgKbqYTVGCcwpOe9OJRr7h2N.eWfnAvKOl9Ead1Sdbm5IO', NULL, '2022-05-31 19:12:56', 1, NULL, NULL, NULL),
+(15, 'john smith', 'johnsmith@gmail.com', NULL, '$2y$10$7TYio3TjCaK1vfO43sdVwe1yCg.uyBTODfUkuL.6eKlEOBIRczCfW', '+243817883541', 'Beni', '1654038767.jpg', 'M', 2, '$2y$10$Ct/fL6sUQmMDW8CygIx2fuE4WsVjvjlfX2s9gyASjCgv0lG2iV3Ka', NULL, '2022-05-31 19:16:58', 1, NULL, NULL, NULL),
+(16, 'jojo kahembe', 'jojo@gmail.com', NULL, '$2y$10$xTXaFvYC2LTU.oDnvMXqquAyal6H7.l/WJmFhnKEKvy1N5WSOk/2O', NULL, NULL, 'avatar.png', 'M', 2, '$2y$10$j9lYKwSc4p1rI4U0sQTOGOauFtRATzmNmwqIUu0cuHAtdazpCKpSS', NULL, NULL, 0, NULL, NULL, NULL),
+(17, 'Patrick ombeni', 'patrick@gmail.com', NULL, '$2y$10$uAKvBshLnpTli5TGrP9A0uXmZl.UzJ1FRut5uEEa6MyYqKptleQRa', NULL, NULL, '1655789076.jpg', 'M', 2, '$2y$10$IVo.bNSnPgyq.6rFzUxhPOZ1xAmvuD6T3xc3JcJEgtj/O8aYWejfa', NULL, '2022-06-21 03:24:36', 0, NULL, NULL, NULL),
+(18, 'jonathan dufina', 'jonathan12@gmail.com', NULL, '$2y$10$k.atrYUfNHhUqXu5kuoHye4Ibitvgyit0o.vCpdre8RS15FNd0wiW', NULL, NULL, '1655788876.jpg', 'M', 2, '$2y$10$5Jg6nldOfetBkxocGACXB.64YRg4/TYN5zUEg8hAVBBfj0RQrR5Oa', NULL, '2022-06-21 03:21:16', 1, NULL, NULL, NULL),
+(19, 'jonathan board', 'grafikart@gmail.com', NULL, '$2y$10$rMtRJDBgQX5gRX1OlrrI1OOn/lfTFcxj6T7WSVAeI1i6bALMbEYFO', NULL, NULL, 'avatar.png', 'M', 2, '$2y$10$L8apYY7zQ64rrYpAijRla.TOvGYufvq9TrO7foJ.wNN4KXBIiumV6', NULL, NULL, 0, NULL, NULL, NULL),
+(21, 'Pionde bien sefu', 'piondesefu123@gmail.com', NULL, '$2y$10$89Lsat0OoFMzXsp04EuxzeQc5xQIOQ774s51v/CPA6XzSxVju2wqu', '243817883541', 'Goma himbi', 'avatar.png', 'M', 2, '$2y$10$juF6VS0CxhueOWjyFyqMneyyndS1ro7iImVQPExJS8z46zEScTMjW', NULL, '2022-10-19 16:42:19', 1, NULL, NULL, NULL),
+(22, 'Sefu kikuni', 'kikuni@gmail.com', NULL, '$2y$10$HI/W/4ys4t4ZVcPS4nuVM.1WcGehNbWzrH47HLzQBwnPaMpObPa0G', NULL, NULL, 'avatar.png', 'M', 2, '$2y$10$FJvL1LPBvenG/AyXPg5kyeqCvVH7.fbhAfauWq5djMO2NwySSdXrK', NULL, '2022-10-22 20:45:10', 1, NULL, NULL, NULL),
+(23, 'pataule', 'pataule@gmail.com', NULL, '$2y$10$JuGguSWB0TpkNhAOPFra5Ovw/ryjQxS/DPTP2i5fFkvagaq5H6EJ6', NULL, NULL, 'avatar.png', 'M', 2, '$2y$10$xTmrq4ld8AUlG6Iy6wegUeMbdDml9032NVmSxtafBo1HsViMDqNbu', NULL, '2022-10-22 20:45:07', 1, NULL, NULL, NULL),
+(24, 'Siwa mumbere', 'siwa@gmail.com', NULL, '$2y$10$RPC46ETzHL2qUm9qYfg.zOLYnGCfMsyI/4CvRonZaW/UsOvFFIBfq', '+243817883541', 'Goma ulpgl', 'avatar.png', 'M', 2, 'QAXUQh8FriosbiVEGXwrFZhX9Qx2Eb8aryenjNWupIDHoCYkpasQMLepJakD', NULL, '2022-10-22 23:05:56', 1, 'Shabunda', 'mwenga', 'mwenga centre'),
+(25, 'reheme kikuni', 'rehema@gmail.com', NULL, '$2y$10$CXbUWMqyRg4pAAqssmUvJOGHARxJjb8VD6rAQt9BkwbpDcklU19IK', '+243970524665', 'Goma himi', 'avatar.png', 'F', 2, 'wWxp4pgw9ktHRkPdOV1e8WUiCf9MngmN6DejZmHc1aOTo2LVTLEOj1qtFeX6', NULL, NULL, 1, 'Shabunda', 'mwenga', 'mwenga centre');
 
 -- --------------------------------------------------------
 
@@ -1118,12 +1226,12 @@ CREATE TABLE `videos` (
 --
 
 INSERT INTO `videos` (`id`, `titre`, `description`, `url`, `created_at`, `updated_at`) VALUES
-(1, 'Actualité', 'description de la video 1', 'https://www.youtube.com/watch?v=hfVgvN_8bhY', '2022-02-02 13:09:12', '2022-10-19 07:36:11'),
-(2, 'Codding train', 'cool', 'https://www.youtube.com/watch?v=hfVgvN_8bhY', '2022-02-02 13:10:37', '2022-07-11 10:38:20'),
-(4, 'Life Week end du Vendredi 4 Septembre 2020 avec Emma Lohoues', 'Ce Vendredi 4 Septembre 2020,  Konnie et les girls du #LifeWKD étaient en compagnie de Emma Lohoues pour la dernière émission de la saison 1.', 'https://youtu.be/xQIFzLBB0h8', '2022-07-11 10:38:02', '2022-07-11 10:38:02'),
-(5, 'Apoutchou Life - La réunion (lancement)', 'Retrouvez également l\'émission sur le Lifeplay  👉http://www.lifeplay.ci\n#Lifetv', 'https://youtu.be/P36w5f345r0', '2022-07-11 10:39:27', '2022-07-11 10:39:27'),
-(6, 'APOUTCHOU LIFE - Episode 1', 'Retrouvez également l\'émission sur le Lifeplay  👉http://www.lifeplay.ci \n#LifeTV', 'https://youtu.be/AKRiNaEwEuw', '2022-07-11 10:40:19', '2022-07-11 10:40:19'),
-(7, 'La minute sans filtre Apoutchou Life Part 1', '#Lifetv', 'https://youtu.be/mxj8paTGVG8', '2022-07-11 10:41:38', '2022-07-11 10:41:38');
+(1, 'Actualité', 'description de la video 1', 'https://www.youtube.com/embed/eOsjzbb8AUE', '2022-02-02 13:09:12', '2022-10-20 17:08:10'),
+(2, 'Codding train', 'cool', 'https://www.youtube.com/embed/eOsjzbb8AUE', '2022-02-02 13:10:37', '2022-10-20 17:08:18'),
+(4, 'Life Week end du Vendredi 4 Septembre 2020 avec Emma Lohoues', 'Ce Vendredi 4 Septembre 2020,  Konnie et les girls du #LifeWKD étaient en compagnie de Emma Lohoues pour la dernière émission de la saison 1.', 'https://www.youtube.com/embed/eOsjzbb8AUE', '2022-07-11 10:38:02', '2022-10-20 17:08:26'),
+(5, 'Apoutchou Life - La réunion (lancement)', 'Retrouvez également l\'émission sur le Lifeplay  👉http://www.lifeplay.ci\n#Lifetv', 'https://www.youtube.com/embed/eOsjzbb8AUE', '2022-07-11 10:39:27', '2022-10-20 17:08:33'),
+(6, 'APOUTCHOU LIFE - Episode 1', 'Retrouvez également l\'émission sur le Lifeplay  👉http://www.lifeplay.ci \n#LifeTV', 'https://www.youtube.com/embed/nwJK-jo91vA', '2022-07-11 10:40:19', '2022-10-20 17:09:24'),
+(7, 'La minute sans filtre Apoutchou Life Part 1', '#Lifetv', 'https://www.youtube.com/embed/qocBI77Vr9A', '2022-07-11 10:41:38', '2022-10-20 17:10:00');
 
 -- --------------------------------------------------------
 
@@ -1233,6 +1341,12 @@ ALTER TABLE `link_canvas_deuxes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `localisations`
+--
+ALTER TABLE `localisations`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `messages`
 --
 ALTER TABLE `messages`
@@ -1296,6 +1410,12 @@ ALTER TABLE `provinces`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `reunions`
+--
+ALTER TABLE `reunions`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `roles`
 --
 ALTER TABLE `roles`
@@ -1346,6 +1466,12 @@ ALTER TABLE `territoires`
   ADD UNIQUE KEY `territoires_nomterritoire_unique` (`nomTerritoire`);
 
 --
+-- Index pour la table `textos`
+--
+ALTER TABLE `textos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `theme_formes`
 --
 ALTER TABLE `theme_formes`
@@ -1392,7 +1518,7 @@ ALTER TABLE `basics`
 -- AUTO_INCREMENT pour la table `blogs`
 --
 ALTER TABLE `blogs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT pour la table `busness_plans`
@@ -1416,7 +1542,7 @@ ALTER TABLE `category_articles`
 -- AUTO_INCREMENT pour la table `contact_infos`
 --
 ALTER TABLE `contact_infos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `entreprises`
@@ -1455,16 +1581,22 @@ ALTER TABLE `link_canvas_deuxes`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
+-- AUTO_INCREMENT pour la table `localisations`
+--
+ALTER TABLE `localisations`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT pour la table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT pour la table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT pour la table `mot_semaines`
@@ -1515,6 +1647,12 @@ ALTER TABLE `provinces`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT pour la table `reunions`
+--
+ALTER TABLE `reunions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
 -- AUTO_INCREMENT pour la table `roles`
 --
 ALTER TABLE `roles`
@@ -1563,6 +1701,12 @@ ALTER TABLE `territoires`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT pour la table `textos`
+--
+ALTER TABLE `textos`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
 -- AUTO_INCREMENT pour la table `theme_formes`
 --
 ALTER TABLE `theme_formes`
@@ -1572,7 +1716,7 @@ ALTER TABLE `theme_formes`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT pour la table `user_attendaces`

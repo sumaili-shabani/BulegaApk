@@ -347,7 +347,7 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 import uploadImage from "./photo";
-import roleComponent from "./roleComponent";
+import roleComponent from "./roleComponent.vue";
 export default {
   components: {
     uploadImage,

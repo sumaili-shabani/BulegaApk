@@ -10,7 +10,12 @@
                     Articles publiés <span class="caption"><br>{{svData.NombreBlog}}</span>
                 </strong>
                 <v-spacer></v-spacer>
-                <v-icon color="grey" class="ml-2">fas fa-chevron-circle-right</v-icon>
+                
+
+                <router-link to="/articles" style="text-decoration: none;">
+                    <v-icon  color="grey" class="ml-2">fa-chevron-circle-right</v-icon>
+                </router-link>
+                
             </v-app-bar>
             <v-app-bar color="rgba(0,0,0,0)" tile class="mt-3">
                 <v-btn  tile fab small color="green lighten-4" elevation="0">
@@ -18,21 +23,11 @@
 
                 </v-btn>
                 <strong class="subtitle black--text ml-2">
-                    <a 
-                    :href="
-                        `${baseURL}/documents/default/winraredev.zip`
-                    "
-                    
-                    class="text-black"
-                    style="text-decoration: none; color: black;"
-                    >
-                        Télécharger Winrar
-                        
-                    </a>
-                    <span class="caption"><br>pour compresser  les doccuments</span>
+                    Bienvenu chez nous!
+                    <span class="caption"><br>Santez-vous à laise</span>
                 </strong>
                 <v-spacer></v-spacer>
-                <v-icon color="grey" class="ml-2">fas fa-chevron-circle-right</v-icon>
+                <v-icon color="grey" class="ml-2">fa-chevron-circle-right</v-icon>
             </v-app-bar>
             <v-app-bar color="rgba(0,0,0,0)" tile class=mt-3>
                 <v-btn tile fab small color="blue lighten-4" elevation="0" @click.stop="showPDGNavigation()">
@@ -42,7 +37,7 @@
                     Les chefs d'entreprises  <span class="caption"><br>{{svData.NombreTotalEntreprise}}</span>
                 </strong>
                 <v-spacer></v-spacer>
-                <v-icon color="grey" class="ml-2">fas fa-chevron-circle-right</v-icon>
+                <v-icon color="grey" class="ml-2">fa-chevron-circle-right</v-icon>
             </v-app-bar>
             <v-toolbar flat color="rgba(0,0,0,0)" dense class="mt-1">
                 <v-toolbar-title>Date</v-toolbar-title>

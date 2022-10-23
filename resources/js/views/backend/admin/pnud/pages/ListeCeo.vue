@@ -1,6 +1,11 @@
 <template>
     <div>
         <v-layout row wrap>
+            <v-flex xs12 sm12 md12 lg12>
+                <ProfileComponent ref="ProfileComponent" />
+            </v-flex>
+        </v-layout>
+        <v-layout row wrap>
             <v-flex xs12 md12 lg12 sm12>
                 <v-navigation-drawer
                     v-model="drawer"
@@ -35,11 +40,11 @@
                     <!--  liste ceo -->
                     <v-list dense>
                         <!-- v-show="data.id == userId ? false : true" -->
-                        <v-subheader>Liste des PDG des entreprises</v-subheader>
+                        <v-subheader>Liste des Utilisateurs du système</v-subheader>
                         <v-list-item
                         style="height: 60px"
                         v-for="data in fetchData_2"
-                        :key="data.id"
+                        :key="data.user_id"
                         
                         >
                     
@@ -52,25 +57,19 @@
                                 </v-list-item>
                                 <div
                                     class="text--primary"  
-                                    style="
-                                        height: 20px;
-                                        position: relative;
-                                        top: -8px;
-                                        padding: 2px;
-                                    "
+                                    style="height: 20px;position: relative;top: -8px;padding: 2px;"
                                 >
                                 {{data.email}}
                                 </div>
                                 
                             </v-list-item-content>
-                            <v-list-item-action v-if="userData.id_role==1 || userData.id_role==3 ? true :false">
+                            <v-list-item-action v-if="userData.id_role==1 || userData.id_role==2 || userData.id_role==3 ? true :false">
                                 <v-btn
                                 small
                                 :disabled="loading"
                                 fab
                                 depressed
-                                link
-                                :to="'/admin/entreprise_detail/' + data.slug"
+                                @click="showRoleModal(data.user_id, data.name)"
                                 >
                                 <v-icon>visibility</v-icon>
                                 </v-btn>
@@ -105,10 +104,13 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 import userImage from "../../../../component/userImage.vue";
+import ProfileComponent from "../../ProfileComponent.vue";
+
 export default {
     props:["drawer"],
     components:{
         userImage,
+        ProfileComponent,
 
     },
     data(){
@@ -142,11 +144,23 @@ export default {
 
         //fetch ceo
         searchMember2: _.debounce(function () {
-        this.onPageChangeCeoEntreprise();
+            this.onPageChangeCeoEntreprise();
         }, 300),
         onPageChangeCeoEntreprise() {
-        this.fetch_data_ceoEntreprise(`${this.apiBaseURL}/fetch_ceo_entreprise?page=`);
+            this.fetch_data_ceoEntreprise(`${this.apiBaseURL}/AllUserfetch?page=`);
         },
+
+        showRoleModal(id, name) {
+            this.$refs.ProfileComponent.$data.dialog = true;
+            this.$refs.ProfileComponent.$data.svData.id = id;
+
+            this.$refs.ProfileComponent.$data.titleComponent =
+                "Détail du profil de: " + name;
+            
+            this.$refs.ProfileComponent.showInfoUser(id);
+                
+        },
+
 
     },
     created(){

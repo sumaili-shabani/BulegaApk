@@ -30,7 +30,10 @@ class UserController extends Controller
        
         $data = DB::table('users')
         ->join('roles','users.id_role','=','roles.id')
-        ->select('users.id as user_id','users.avatar','users.name','users.email','users.id_role','roles.nom as role_name','users.sexe','users.telephone','users.adresse','users.active');
+        ->select('users.id as user_id','users.avatar','users.name','users.email','users.id_role','roles.nom as role_name','users.sexe','users.telephone','users.adresse','users.active',
+
+            'users.territoire','users.chefferie', 'users.groupement',
+        );
         
 
         if (!is_null($request->get('query'))) {
@@ -51,11 +54,43 @@ class UserController extends Controller
         
     }
 
+    public function AllUserfetch(Request $request)
+    {
+        //
+       
+        $data = DB::table('users')
+        ->join('roles','users.id_role','=','roles.id')
+        ->select('users.id as user_id','users.avatar','users.name','users.email','users.id_role','roles.nom as role_name','users.sexe','users.telephone','users.adresse','users.active',
+
+            'users.territoire','users.chefferie', 'users.groupement',
+        );
+        
+
+        if (!is_null($request->get('query'))) {
+            # code...
+            $query = $this->Gquery($request);
+
+            $data->where('users.name', 'like', '%'.$query.'%')
+            ->orWhere('users.email', 'like', '%'.$query.'%')
+            ->orderBy("users.id", "asc");
+
+            return $this->apiData($data->paginate(6));
+           
+
+        }
+        $data->orderBy("users.id", "desc");
+        return $this->apiData($data->paginate(6));
+       
+        
+    }
+
+    
+
     function fetch_user_ceo()
     {
         $data = DB::table('users')
         ->join('roles','users.id_role','=','roles.id')
-        ->select('users.id as user_id','users.id as id','users.avatar','users.name','users.email','users.id_role','roles.nom as role_name','users.sexe','users.telephone','users.adresse')
+        ->select('users.id as user_id','users.id as id','users.avatar','users.name','users.email','users.id_role','roles.nom as role_name','users.sexe','users.telephone','users.adresse','users.territoire','users.chefferie', 'users.groupement')
         ->where('id_role', 2)
         ->get();
         return response()->json([
@@ -127,7 +162,10 @@ class UserController extends Controller
                 'email'             =>  $request->email,
                 'telephone'         =>  $request->telephone,
                 'adresse'           =>  $request->adresse,
-                'sexe'              =>  $request->sexe
+                'sexe'              =>  $request->sexe,
+                'territoire'        =>  $request->territoire,
+                'chefferie'         =>  $request->chefferie,
+                'groupement'        =>  $request->groupement
                 
             ]);
 
@@ -149,7 +187,10 @@ class UserController extends Controller
                 'adresse'           =>  $request->adresse,
                 'password'          =>  Hash::make($request->password),
                 'remember_token'    =>  Hash::make(rand(0,10)),
-                'id_role'           =>  2
+                'id_role'           =>  2,
+                'territoire'        =>  $request->territoire,
+                'chefferie'         =>  $request->chefferie,
+                'groupement'        =>  $request->groupement
             ]);
 
             
@@ -308,7 +349,7 @@ class UserController extends Controller
         //
         $data = DB::table('users')
         ->join('roles','users.id_role','=','roles.id')
-        ->select('users.id','users.avatar','users.name','users.email','users.id_role','roles.nom as role_name','users.sexe','users.telephone','users.adresse')
+        ->select('users.id','users.avatar','users.name','users.email','users.id_role','roles.nom as role_name','users.sexe','users.telephone','users.adresse','users.territoire','users.chefferie', 'users.groupement')
         ->where("users.id", $id)
         ->get();
         return response()->json(['data'  =>  $data]);
@@ -328,7 +369,7 @@ class UserController extends Controller
         //
         $data = DB::table('users')
         ->join('roles','users.id_role','=','roles.id')
-        ->select('users.id as user_id','users.avatar','users.name','users.email','users.id_role','roles.nom as role_name','users.sexe','users.telephone','users.adresse')
+        ->select('users.id as user_id','users.avatar','users.name','users.email','users.id_role','roles.nom as role_name','users.sexe','users.telephone','users.adresse','users.territoire','users.chefferie', 'users.groupement')
         ->where("users.id", $id)
         ->get();
         return response()->json(['data'  =>  $data]);

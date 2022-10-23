@@ -38,7 +38,7 @@
                                 </p>
                               </div>
                               <br />
-                              <v-text-field label="Nom" append-icon="person"
+                              <v-text-field label="Votre nom complet" append-icon="person"
                                 :rules="[(v) => !!v || 'Ce champ est requis']" outlined v-model="svData.name">
                               </v-text-field>
 
@@ -53,11 +53,36 @@
                                 append-icon="wc" :rules="[(v) => !!v || 'Ce champ est requis']" outlined dense
                                 item-text="designation" item-value="designation" v-model="svData.sexe"></v-select>
 
-                              <v-text-field placeholder="Password" v-model="svData.password"
-                                :type="show1 ? 'text' : 'password'" outlined
+                              <v-text-field placeholder="Votre Mot de passe secret" label="Mot de passe"
+                                v-model="svData.password" :type="show1 ? 'text' : 'password'" outlined
                                 :append-icon="show1 ? 'visibility' : 'visibility_off'"
                                 :rules="[(v) => !!v || 'Ce champ est requis']" @click:append="show1 = !show1">
                               </v-text-field>
+
+                              <v-text-field label="N° de téléphone" prepend-inner-icon="phone_iphone" placeholder="+243..."
+                                :rules="[(v) => !!v || 'Ce champ est requis']" outlined v-model="svData.telephone">
+                              </v-text-field>
+
+                              <v-text-field label="Adresse domicile" prepend-inner-icon="location_on"
+                                :rules="[(v) => !!v || 'Ce champ est requis']" outlined v-model="svData.adresse">
+                              </v-text-field>
+
+
+
+                              <v-select :items="ListeTerritoire" label="Votre Territoire d’origine"
+                                prepend-inner-icon="home" :rules="[(v) => !!v || 'Ce champ est requis']" outlined dense
+                                item-text="designation" item-value="designation" v-model="svData.territoire"></v-select>
+
+                              <v-text-field label="Votre chefferie ou secteur d’origine" prepend-inner-icon="home_work"
+                                :rules="[(v) => !!v || 'Ce champ est requis']" outlined v-model="svData.chefferie">
+                              </v-text-field>
+
+                              <v-text-field label="Votre grouppement ou clan " prepend-inner-icon="house"
+                                :rules="[(v) => !!v || 'Ce champ est requis']" outlined v-model="svData.groupement">
+                              </v-text-field>
+
+
+
 
                               <v-checkbox :rules="[
                                 (v) => !!v || 'Vous devez accepter de continuer!',
@@ -138,6 +163,11 @@ export default {
         email: "",
         password: "",
         sexe: "",
+        territoire: "",
+        chefferie: "",
+        groupement: "",
+        telephone:"",
+        adresse:"",
       },
       valid: false,
       diaL: false,
@@ -147,7 +177,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(["basicInfoList", "sitInfoList", "categoryArticleList", "isloading"]),
+    ...mapGetters(["basicInfoList", "sitInfoList", "ListeTerritoire", "categoryArticleList", "isloading"]),
   },
   methods: {
     ...mapActions(["getInfoBasic", "getInfoSite", "getCategyArticle"]),

@@ -34,6 +34,7 @@
               ></v-text-field>
 
               <v-text-field
+                placeholder="+243..."
                 label="N° de téléphone"
                 prepend-inner-icon="phone_iphone"
                 :rules="[(v) => !!v || 'Ce champ est requis']"
@@ -60,6 +61,37 @@
                 item-value="designation"
                 v-model="svData.sexe"
               ></v-select>
+
+              <v-select
+                :items="ListeTerritoire"
+                label="Votre Territoire d’origine"
+                prepend-inner-icon="home"
+                :rules="[(v) => !!v || 'Ce champ est requis']"
+                outlined
+                dense
+                item-text="designation"
+                item-value="designation"
+                v-model="svData.territoire"
+              ></v-select>
+
+              <v-text-field
+                label="Votre chefferie ou secteur d’origine"
+                prepend-inner-icon="home_work"
+                :rules="[(v) => !!v || 'Ce champ est requis']"
+                outlined
+                v-model="svData.chefferie"
+              ></v-text-field>
+
+              <v-text-field
+                label="Votre grouppement ou clan "
+                prepend-inner-icon="house"
+                :rules="[(v) => !!v || 'Ce champ est requis']"
+                outlined
+                v-model="svData.groupement"
+              ></v-text-field>
+
+
+
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
@@ -93,13 +125,16 @@ export default {
         sexe: "",
         telephone: "",
         adresse: "",
+        territoire: "",
+        chefferie: "",
+        groupement: "",
       },
       fetchData: null,
       titreModal: "",
     };
   },
   computed: {
-    ...mapGetters(["userList", "isloading"]),
+    ...mapGetters(["userList","ListeTerritoire", "isloading"]),
   },
   created() {
     this.editData(this.userData.id);
