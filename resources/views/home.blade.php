@@ -15,6 +15,8 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                  {{--   <img src="'.$logoSite.'"  width="100" height="100" style="float: right; margin-top: 10px;" /> --}}
                 </div>
             </div>
         </div>

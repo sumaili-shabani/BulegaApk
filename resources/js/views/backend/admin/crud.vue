@@ -98,17 +98,67 @@
                   </div>
                 </v-flex>
 
-                <v-flex xs12 md12 sm12 lg12>
+               
+
+               
+
+                <v-flex xs12 sm12 md12 lg12>
                   <div class="mr-1">
-                    <v-text-field
-                      label="Mot de passe"
-                      prepend-inner-icon="lock"
+                    <v-select
+                      label="Nom du territoire"
+                      prepend-inner-icon="house"
                       :rules="[(v) => !!v || 'Ce champ est requis']"
+                      :items="OurTerritoire"
+                      item-text="nomTerritoire"
+                      item-value="id"
                       outlined
-                      v-model="svData.password"
-                    ></v-text-field>
+                      v-model="svData.idTer"
+                      @change="getChefferiTug(svData.idTer)"
+                    >
+                    </v-select>
                   </div>
                 </v-flex>
+
+                <v-flex xs12 sm12 md6 lg6>
+                  <div class="mr-1">
+
+                    <v-select
+                      label="Nom de la chefferie"
+                      prepend-inner-icon="apartment"
+                      :rules="[(v) => !!v || 'Ce champ est requis']"
+                      :items="stataData.ChefferiList"
+                      item-text="nomTer"
+                      item-value="id"
+                      outlined
+                      v-model="svData.idChef"
+
+                      @change="getGroupementTug(svData.idChef)"
+                    >
+                    </v-select>
+
+
+                  </div>
+                </v-flex>
+
+                <v-flex xs12 sm12 md6 lg6>
+                  <div class="mr-1">
+                    <v-select
+                      label="Nom du groupement"
+                      prepend-inner-icon="home"
+                      :rules="[(v) => !!v || 'Ce champ est requis']"
+                      :items="stataData.groupementList"
+                      item-text="nomGroup"
+                      item-value="id"
+                      outlined
+                      v-model="svData.idGroup"
+                    >
+                    </v-select>
+                  </div>
+                </v-flex>
+
+               
+
+               
 
                 
               </v-layout>
@@ -310,16 +360,44 @@
                           <span>Modifier son avatar</span>
                         </v-tooltip>
 
-                        <v-tooltip top color="black">
-                          <template v-slot:activator="{ on, attrs }">
-                            <span v-bind="attrs" v-on="on">
-                              <v-btn @click="printBill(item.user_id)" fab small
-                                ><v-icon color="blue">print</v-icon></v-btn
-                              >
-                            </span>
+                        
+
+                        <!-- impression -->
+                        <v-menu bottom rounded offset-y transition="scale-transition">
+                          <template v-slot:activator="{ on }">
+                            <v-btn icon v-on="on" small fab depressed text>
+                              <v-icon>more_vert</v-icon>
+                            </v-btn>
                           </template>
-                          <span>Imprimer sa carte</span>
-                        </v-tooltip>
+
+                          <v-list dense width="">
+                           
+
+
+                            <v-list-item link @click="printBillFiche(item.user_id)">
+                              <v-list-item-icon>
+                                <v-icon>print</v-icon>
+                              </v-list-item-icon>
+                              <v-list-item-title style="margin-left: -20px">PDF Fiche</v-list-item-title>
+                            </v-list-item>
+
+                            <v-divider></v-divider>
+                            <v-subheader>Impression action</v-subheader>
+                            <v-divider></v-divider>
+
+                            <v-list-item link @click="printBill(item.user_id)">
+                              <v-list-item-icon>
+                                <v-icon>print_disabled</v-icon>
+                              </v-list-item-icon>
+                              <v-list-item-title style="margin-left: -20px">PDF Carte</v-list-item-title>
+                            </v-list-item>
+                            
+
+                          </v-list>
+                        </v-menu>
+                        <!-- fin impression -->
+
+
                       </td>
                     </tr>
                   </tbody>
@@ -331,7 +409,7 @@
                 color="primary"
                 v-model="pagination.current"
                 :length="pagination.total"
-                 :total-visible="7"
+                :total-visible="7"
                 @input="onPageChange"
               ></v-pagination>
             </v-card-text>
@@ -371,6 +449,14 @@ export default {
         adresse: "",
         // photo: "",
         sexe: "",
+
+        idTer: "",
+        idChef: "",
+        idGroup: "",
+      },
+      stataData:{
+        ChefferiList:'',
+        groupementList:'',
       },
       fetchData: null,
       titreModal: "",
@@ -378,10 +464,10 @@ export default {
   },
 
   computed: {
-    ...mapGetters(["userList", "isloading"]),
+    ...mapGetters(["userList","OurTerritoire", "isloading"]),
   },
   methods: {
-    ...mapActions(["getUser"]),
+    ...mapActions(["getUser","getOurTerritoire"]),
 
     showPhotoModal(id, avatar) {
       this.$refs.uploadImage.$data.dialog = true;
@@ -428,7 +514,6 @@ export default {
       if (this.$refs.form.validate()) {
         this.isLoading(true);
 
-        if (this.edit) {
           this.insertOrUpdate(
             `${this.apiBaseURL}/insert_user`,
             JSON.stringify(this.svData)
@@ -441,30 +526,11 @@ export default {
               this.getUser();
               this.onPageChange();
 
-              this.dialog = false;
+              // this.dialog = false;
             })
             .catch((err) => {
               this.svErr(), this.isLoading(false);
             });
-        } else {
-          this.insertOrUpdate(
-            `${this.baseURL}/register_count`,
-            JSON.stringify(this.svData)
-          )
-            .then(({ data }) => {
-              this.showMsg(data.data);
-              this.isLoading(false);
-              this.edit = false;
-              this.resetObj(this.svData);
-              this.getUser();
-              this.onPageChange();
-
-              this.dialog = false;
-            })
-            .catch((err) => {
-              this.svErr(), this.isLoading(false);
-            });
-        }
       }
     },
     editData(id) {
@@ -476,9 +542,18 @@ export default {
            
             this.svData.id = item.user_id;
             this.titleComponent = "modification de " + item.name;
+
+            this.getChefferiTug(item.idTer);
+            this.getGroupementTug(item.idChef);
+
           });
 
           this.getSvData(this.svData, data.data[0]);
+
+         
+
+
+
           this.edit = true;
           this.dialog = true;
         }
@@ -520,9 +595,7 @@ export default {
       }
     },
 
-    printBill(id) {
-      window.open(`${this.apiBaseURL}/print_bill?id_user=` + id);
-    },
+   
 
     editTitleModal(id) {
       this.editOrFetch(`${this.apiBaseURL}/fetch_single_user/${id}`).then(
@@ -534,11 +607,73 @@ export default {
         }
       );
     },
+
+    //fultrage de donnees
+    async getChefferiTug(idTer) {
+      this.isLoading(true);
+      await axios
+          .get(`${this.apiBaseURL}/fetch_chefferie_tug/${idTer}`)
+          .then((res) => {
+              var chart = res.data.data;
+
+              if (chart) {
+                  this.stataData.ChefferiList = chart;
+              } else {
+                  this.stataData.ChefferiList = [];
+              }
+
+              this.isLoading(false);
+
+              //   console.log(this.stataData.car_optionList);
+          })
+          .catch((err) => {
+              this.errMsg();
+              this.makeFalse();
+              reject(err);
+          });
+    },
+
+    async getGroupementTug(idChef) {
+      this.isLoading(true);
+      await axios
+          .get(`${this.apiBaseURL}/fetch_groupement_tug/${idChef}`)
+          .then((res) => {
+              var chart = res.data.data;
+
+              if (chart) {
+                  this.stataData.groupementList = chart;
+              } else {
+                  this.stataData.groupementList = [];
+              }
+
+              this.isLoading(false);
+
+              //   console.log(this.stataData.car_optionList);
+          })
+          .catch((err) => {
+              this.errMsg();
+              this.makeFalse();
+              reject(err);
+          });
+    },
+
+    printBill(id) {
+      window.open(`${this.apiBaseURL}/pdf_card_identification?id=` + id);
+    },
+    printBillFiche(id) {
+      window.open(`${this.apiBaseURL}/pdf_fiche_identification?id=` + id);
+    },
+
+
+
+
+
   },
   created() {
     this.getUser();
     this.testTitle();
     this.onPageChange();
+    this.getOurTerritoire();
   },
 };
 </script>

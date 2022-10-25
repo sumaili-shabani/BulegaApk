@@ -324,6 +324,17 @@ export default {
               text: "Territoire",
               href: "/admin/territoire",
             },
+
+            {
+              icon: "store",
+              text: "Chefferie",
+              href: "/admin/chefferie",
+            },
+            {
+              icon: "store",
+              text: "Groupement",
+              href: "/admin/groupement",
+            },
            
             {
               icon: "store",

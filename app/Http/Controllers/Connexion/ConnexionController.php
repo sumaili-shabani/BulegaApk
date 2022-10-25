@@ -36,7 +36,7 @@ class ConnexionController extends Controller
         $testCount = $this->showCountTableWhere("users", "email", $request->email);
         if ($testCount <= 0) {
             // code...
-            $data = DB::insert('insert into users (name, email,password,remember_token,id_role,sexe,avatar, telephone, adresse, territoire,chefferie,groupement) values (:name, :email,:password,:remember_token,:id_role,:sexe,:avatar,:telephone,:adresse, :territoire,:chefferie,:groupement)', [
+            $data = DB::insert('insert into users (name, email,password,remember_token,id_role,sexe,avatar, telephone, adresse, idTer,idChef,idGroup) values (:name, :email,:password,:remember_token,:id_role,:sexe,:avatar,:telephone,:adresse, :idTer,:idChef,:idGroup)', [
                 ':name'             =>  $request->name, 
                 ':email'            =>  $request->email,
                 ':telephone'        =>  $request->telephone,
@@ -45,14 +45,14 @@ class ConnexionController extends Controller
                 ':remember_token'   =>  Hash::make(rand(0,10)),
                 ':id_role'          =>  2,
                 ':sexe'             =>  $request->sexe,
-                ':territoire'       =>  $request->territoire,
-                ':chefferie'        =>  $request->chefferie,
-                ':groupement'       =>  $request->groupement,
+                ':idTer'            =>  $request->idTer,
+                ':idChef'           =>  $request->idChef,
+                ':idGroup'          =>  $request->idGroup,
                 ':avatar'           =>  "avatar.png"
             ]);
 
             return response()->json([
-                'data'      =>  "Création compte avec succès!",
+                'data'      =>  "Création compte avec succès! Prère d'attendre la validation de l'administrateur de compte pour acceder dans votre panel",
                 'success'   =>  $data
             ]);
         }

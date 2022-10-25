@@ -69,17 +69,49 @@
 
 
 
-                              <v-select :items="ListeTerritoire" label="Votre Territoire d’origine"
-                                prepend-inner-icon="home" :rules="[(v) => !!v || 'Ce champ est requis']" outlined dense
-                                item-text="designation" item-value="designation" v-model="svData.territoire"></v-select>
+                              <!-- territoire -->
+                              <v-select
+                                label="Nom du territoire"
+                                prepend-inner-icon="house"
+                                :rules="[(v) => !!v || 'Ce champ est requis']"
+                                :items="OurTerritoire"
+                                item-text="nomTerritoire"
+                                item-value="id"
+                                outlined
+                                v-model="svData.idTer"
+                                @change="getChefferiTug(svData.idTer)"
+                              >
+                              </v-select>
 
-                              <v-text-field label="Votre chefferie ou secteur d’origine" prepend-inner-icon="home_work"
-                                :rules="[(v) => !!v || 'Ce champ est requis']" outlined v-model="svData.chefferie">
-                              </v-text-field>
+                              <v-select
+                                label="Nom de la chefferie"
+                                prepend-inner-icon="apartment"
+                                :rules="[(v) => !!v || 'Ce champ est requis']"
+                                :items="stataData.ChefferiList"
+                                item-text="nomTer"
+                                item-value="id"
+                                outlined
+                                v-model="svData.idChef"
 
-                              <v-text-field label="Votre grouppement ou clan " prepend-inner-icon="house"
-                                :rules="[(v) => !!v || 'Ce champ est requis']" outlined v-model="svData.groupement">
-                              </v-text-field>
+                                @change="getGroupementTug(svData.idChef)"
+                              >
+                              </v-select>
+
+                              <v-select
+                                label="Nom du groupement"
+                                prepend-inner-icon="home"
+                                :rules="[(v) => !!v || 'Ce champ est requis']"
+                                :items="stataData.groupementList"
+                                item-text="nomGroup"
+                                item-value="id"
+                                outlined
+                                v-model="svData.idGroup"
+                              >
+                              </v-select>
+                              <!-- chefferie et groupement -->
+
+
+
 
 
 
@@ -163,11 +195,15 @@ export default {
         email: "",
         password: "",
         sexe: "",
-        territoire: "",
-        chefferie: "",
-        groupement: "",
+        idTer: "",
+        idChef: "",
+        idGroup: "",
         telephone:"",
         adresse:"",
+      },
+      stataData:{
+        ChefferiList:'',
+        groupementList:'',
       },
       valid: false,
       diaL: false,
@@ -177,10 +213,10 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(["basicInfoList", "sitInfoList", "ListeTerritoire", "categoryArticleList", "isloading"]),
+    ...mapGetters(["basicInfoList", "OurTerritoire", "sitInfoList", "ListeTerritoire", "categoryArticleList", "isloading"]),
   },
   methods: {
-    ...mapActions(["getInfoBasic", "getInfoSite", "getCategyArticle"]),
+    ...mapActions(["getInfoBasic", "getInfoSite","getOurTerritoire", "getCategyArticle"]),
 
     showModal() {
       this.$refs.presentation.$data.dialog = true;
@@ -217,12 +253,64 @@ export default {
       }
     },
 
+
+    //fultrage de donnees
+    async getChefferiTug(idTer) {
+      this.isLoading(true);
+      await axios
+          .get(`${this.apiBaseURL}/fetch_chefferie_tug/${idTer}`)
+          .then((res) => {
+              var chart = res.data.data;
+
+              if (chart) {
+                  this.stataData.ChefferiList = chart;
+              } else {
+                  this.stataData.ChefferiList = [];
+              }
+
+              this.isLoading(false);
+
+              //   console.log(this.stataData.car_optionList);
+          })
+          .catch((err) => {
+              this.errMsg();
+              this.makeFalse();
+              reject(err);
+          });
+    },
+
+    async getGroupementTug(idChef) {
+      this.isLoading(true);
+      await axios
+          .get(`${this.apiBaseURL}/fetch_groupement_tug/${idChef}`)
+          .then((res) => {
+              var chart = res.data.data;
+
+              if (chart) {
+                  this.stataData.groupementList = chart;
+              } else {
+                  this.stataData.groupementList = [];
+              }
+
+              this.isLoading(false);
+
+              //   console.log(this.stataData.car_optionList);
+          })
+          .catch((err) => {
+              this.errMsg();
+              this.makeFalse();
+              reject(err);
+          });
+    },
+
+
   },
   created() {
 
     this.getInfoSite();
     this.getInfoBasic();
     this.getCategyArticle();
+    this.getOurTerritoire();
 
   }
 }

@@ -9,7 +9,7 @@
                         <!-- cool -->
                         <v-flex xs12 sm12 md12 lg12>
                             <div class="mr-1">
-                                <Carousel />
+                                 <Carousel /> 
                             </div>
                         </v-flex>
                         <!-- cool -->

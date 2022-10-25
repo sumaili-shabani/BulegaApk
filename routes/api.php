@@ -40,11 +40,17 @@ Route::group(['namespace'   =>  "User"], function(){
     Route::post("change_role_user", 'UserController@ChangeRole');
 
     Route::post("insertion_user", 'UserController@insert_user');
+    Route::post("AutreInfoUpdated", 'UserController@AutreInfoUpdated');
+
+    
 
     // envoie de mail
     Route::post("send_mail", 'SendMailController@send_mail');
     // imprimmer sa carte 
     Route::get('print_bill','UserController@printBill');
+    Route::get('pdf_fiche_identification','UserController@pdf_fiche_identification');
+    Route::get('pdf_card_identification','UserController@pdf_card_identification');
+    
 
     Route::post('edit_photo','UserController@editPhoto');
 
@@ -322,6 +328,16 @@ Route::group(['namespace'   =>  "Backend"], function(){
     Route::post("insert_territoire", 'TerritoireController@store');
     Route::get("fetch_territoire_2", 'TerritoireController@fetch_territoire_2');
 
+    //chefferie
+    Route::get("fetch_chefferie", 'chefferiController@index');
+    Route::get("fetch_single_chefferie/{id}", 'chefferiController@edit');
+    Route::get("delete_chefferie/{id}", 'chefferiController@destroy');
+    Route::post("insert_chefferie", 'chefferiController@store');
+    Route::get("fetch_chefferie_2", 'chefferiController@fetch_chefferie_2');
+
+    Route::get("fetch_chefferie_tug/{idTer}", 'chefferiController@fetch_chefferie_tug');
+    
+
     //texto sms
     Route::get("fetch_texto", 'TextoController@index');
     Route::get("fetch_single_texto/{id}", 'TextoController@edit');
@@ -346,6 +362,15 @@ Route::group(['namespace'   =>  "Backend"], function(){
     Route::get("displayInCalendar/{user_id}", 'ReunionController@displayInCalendar');
     Route::get("showNotificationUser/{user_id}", 'ReunionController@showNotificationUser');
     Route::get("participateToConference/{slug}", 'ReunionController@participateToConference');
+
+    //groupemnt
+    Route::get("fetch_groupement", 'GroupeController@index');
+    Route::get("fetch_single_groupement/{id}", 'GroupeController@edit');
+    Route::get("delete_groupement/{id}", 'GroupeController@destroy');
+    Route::post("insert_groupement", 'GroupeController@store');
+    Route::get("fetch_groupement_2", 'GroupeController@fetch_groupement_2');
+    Route::get("fetch_groupement_tug/{idChef}", 'GroupeController@fetch_groupement_tug');
+    
     
     
     

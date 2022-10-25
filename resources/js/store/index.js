@@ -87,11 +87,52 @@ const state = {
         { designation: 'Walikale' },
         
     ],
+    ListeCelibataire: [
+        { designation: 'Célibataire' },
+        { designation: 'Marié(é)' },
+        { designation: 'Divorcé(é)' },
+        { designation: 'Veuf(ou Ve)' },
+        { designation: 'Consacré(é)' },
+        
+    ],
+
+    ListeEtude: [
+        { designation: 'Primaire' },
+        { designation: 'Secondaire' },
+        { designation: 'Université' },
+        { designation: 'Master' },
+        { designation: 'Doctorant' },
+        { designation: 'Autres' },
+        
+    ],
+
+    ListeActivite: [
+        { designation: 'Commerce' },
+        { designation: 'Santé' },
+        { designation: 'Enseignement' },
+        { designation: 'Politique' },
+        { designation: 'Fonction  publique' },
+        { designation: 'Entrepreneuriat' },
+
+        { designation: 'Artisanat' },
+        { designation: 'Agriculture' },
+        { designation: 'Clergé' },
+        { designation: 'Mécanique' },
+        { designation: 'Architecture' },
+        { designation: 'Maçonnerie' },
+
+        { designation: 'Magistrature' },
+        { designation: 'Mandataire publique' },
+        { designation: 'Autre' },
+        
+    ],
     basicInfoList:[],
     sitInfoList:[],
     blogSingleList:[],
     CategorySlug: [],
     MeetingSlug: [],
+
+    OurTerritoire: [],
 
 
 
@@ -134,7 +175,10 @@ const getters = {
     ListeTitreCanvas: (state) => state.ListeTitreCanvas,
     ListeTitreSwot: (state) => state.ListeTitreSwot,
     ListeTerritoire: (state) => state.ListeTerritoire,
-    
+
+    ListeCelibataire: (state) => state.ListeCelibataire,
+    ListeEtude: (state) => state.ListeEtude,
+    ListeActivite: (state) => state.ListeActivite,
     
     
     id_entreprise: (state) => state.id_entreprise,
@@ -154,6 +198,8 @@ const getters = {
     blogSingleList:(state)=>(state.blogSingleList),
     CategorySlug:(state)=>(state.CategorySlug),
     MeetingSlug:(state)=>(state.MeetingSlug),
+    OurTerritoire:(state)=>(state.OurTerritoire),
+    
     
     
     
@@ -436,6 +482,7 @@ const actions = {
             }).catch((error) => console.log(error))
     },
 
+
     async getSigleBLOGInfos({ commit }, id) {
         commit("SET_LOADING_STATUS");
         await axios
@@ -470,6 +517,17 @@ const actions = {
             })
             .catch((error) => console.log(error));
     },
+
+    async getOurTerritoire({ commit }) {
+        commit('SET_LOADING_STATUS')
+        await axios.get(`${this.state.apiBaseURL}/fetch_territoire_2`)
+            .then(({ data }) => {
+                commit('SET_TERRITOIRE', data.data)
+                commit('SET_LOADING_STATUS')
+            }).catch((error) => console.log(error))
+    },
+
+
 
     
 
@@ -526,6 +584,8 @@ const mutations = {
     GET_BLOG_DETAIL:(state,blogSingleList)=>(state.blogSingleList=blogSingleList),
     SET_CATEGORY_ARTICLE_DETAIL:(state,CategorySlug)=>(state.CategorySlug=CategorySlug),
     SET_METTING_DETAIL:(state,MeetingSlug)=>(state.MeetingSlug=MeetingSlug),
+
+    SET_TERRITOIRE:(state,OurTerritoire)=>(state.OurTerritoire=OurTerritoire),
     
 
 

@@ -3,6 +3,8 @@ namespace App\Traits;
 use App\{User};
 use DB;
 
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
+
 trait GlobalMethod{
 
 	//global query
@@ -204,6 +206,17 @@ trait GlobalMethod{
       }
     }
 
+    function getLogoSite()
+    {
+        $data = DB::table('sites')
+        ->select('id', 'nom', 'description', 'email','adresse','tel1','tel2','tel3','token', 'about','mission','objectif','politique','condition','logo','facebook','linkedin','twitter','youtube')->take(1)->get();
+        $info='';
+        foreach ($data as $row) {
+            // code...
+            $info = $row->logo;
+        }
+        return $info;
+    }
     function getNomSite()
     {
         $data = DB::table('sites')
@@ -257,6 +270,70 @@ trait GlobalMethod{
 
         }
         return $identifiant;
+    }
+
+    function getNomAgent($id)
+    {
+        $data = DB::table('users')
+        
+        ->select(
+             "users.id","users.name","users.email", "users.created_at"
+        )
+        ->where("users.id", $id)
+        ->get();
+        $idAgent = '';
+        foreach ($data as $row) {
+            # code...
+            $idAgent = $row->name;
+        }
+
+        return $idAgent;
+    }
+
+    function generateQrcode($text) {
+
+        $qrc = QrCode::size(100)->generate($text);
+        $qrcode='<img src="data:image/svg+xml;base64,'.base64_encode($qrc).'" 
+        width="70" height="70">';
+        return $qrcode;
+    }
+
+    function displayImg($schema, $file)
+    {
+        $logo=base_path('public/'.$schema.'/'.$file);
+        $f=file_get_contents($logo);
+        $pic='data:image/png;base64,'.base64_encode($f);
+        return $pic;
+    }
+
+    function entetePrintPDF($text1, $text2)
+    {
+        $output = '';
+        $nomSite = $this->getNomSite();
+        $logordc = $this->displayImg('images', 'rdc.png');
+        $logoSite =$this->displayImg('images', $this->getLogoSite());
+
+        $output .=' 
+        <table width="100%" border="0" cellspacing="0" cellpadding="1" >
+            <tr>
+                <td width="25%">
+                    <img src="'.$logoSite.'"  width="100" height="100" style="float: right;margin-top: 15px;" />
+                </td>
+                <td width="50%" style="font-weight:bold;">
+                    <h3 align="center" style="color:blue;">
+                        '.$text1.'
+                    </h3>
+    
+                   <div align="center"> '.$text2.' </div>
+                   <br/>
+                </td>
+                <td width="25%">
+                    <img src="'.$logordc.'"  width="100" height="100" style="float: left;margin-top: 15px;" />
+                </td>
+            </tr>
+        </table>
+        ';
+        return $output;
     }
 
 

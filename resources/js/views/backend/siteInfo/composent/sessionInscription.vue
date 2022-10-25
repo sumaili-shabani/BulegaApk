@@ -4,7 +4,10 @@
         <div class="text-center">
             <span class="text-h5">{{titre}}</span>
            <p>
-            Fiche d'identification
+            <router-link to="/login_lega" class="btn btn-warning btn-sm" >
+                Fiche d'identification ↵
+            </router-link> 
+           
            </p>
             
         </div>
@@ -95,7 +98,7 @@ import { mapGetters, mapActions } from "vuex";
 export default {
     data(){
         return{
-            titre:"Et pour t'aider à faire tout ça",
+            titre:"Vous êtes MULEGA identifiez-vous ici!",
             serviceList:[],
             fetchData: null,
             query: "",

@@ -68,8 +68,10 @@ import Texto from './views/backend/admin/Texto.vue'
 import Reunion from './views/backend/admin/Reunion.vue'
 import Calendrier from './views/backend/admin/Conference.vue'
 
-import MeetingConference from  './views/backend/admin/MeetingConference.vue'
+import Chefferie from './views/backend/admin/Chefferie.vue'
 
+import MeetingConference from  './views/backend/admin/MeetingConference.vue'
+import GroupementConfig from  './views/backend/admin/GroupementConfig.vue'
 import LoginLega from  './views/frontend/login.vue';
 import RegisterLega from  './views/frontend/register.vue';
 //fin burega
@@ -311,6 +313,8 @@ const Router = new VueRouter({
     },
 
 
+
+
     
 
     
@@ -465,6 +469,22 @@ const Router = new VueRouter({
       component: MeetingConference,
       // meta: { middleware: [isNotAdmin] }
     },
+    {
+      path: '/admin/chefferie',
+      name: 'chefferie_one',
+      component: Chefferie,
+      meta: { middleware: [isNotAdmin] }
+    },
+
+    {
+      path: '/admin/groupement',
+      name: 'groupement_one',
+      component: GroupementConfig,
+      meta: { middleware: [isNotAdmin] }
+    },
+
+
+    
 
     
     
