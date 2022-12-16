@@ -15,26 +15,28 @@
                     <div class="mr-1">
                         <v-list>
                             <v-list-item router to="/" link>
-                                <v-list-tile-content>
+                                <v-list-item-content>
                                     Accueil
-                                </v-list-tile-content>
+                                </v-list-item-content>
                             </v-list-item>
                             <v-list-item router to="/galery_photo" link>
-                                <v-list-tile-content>
+                                <v-list-item-content>
                                     Galerie
-                                </v-list-tile-content>
+                                </v-list-item-content>
                             </v-list-item>
 
-                            <v-list-item router to="/video" link>
-                                <v-list-tile-content>
-                                    Vidéo
-                                </v-list-tile-content>
+                            <v-list-item router to="/login_lega" v-if="userData.id_role == null"  link>
+                                <v-list-item-content>
+                                    Se connecter
+                                </v-list-item-content>
                             </v-list-item>
-                            <v-list-item router to="/contact" link>
-                                <v-list-tile-content>
-                                    Contact
-                                </v-list-tile-content>
+                            <v-list-item router to="/register_lega" v-if="userData.id_role == null" link>
+                                <v-list-item-content>
+                                    S'enregistrer
+                                </v-list-item-content>
                             </v-list-item>
+
+                            
                         </v-list>
                     </div>
 
@@ -44,26 +46,28 @@
                     <div class="mr-1">
                         <v-list>
                             <v-list-item router to="/about" link>
-                                <v-list-tile-content>
+                                <v-list-item-content>
                                     A propos
-                                </v-list-tile-content>
+                                </v-list-item-content>
                             </v-list-item>
                             <v-list-item router to="/work" link>
-                                <v-list-tile-content>
+                                <v-list-item-content>
                                     Ce que nous faisons
-                                </v-list-tile-content>
+                                </v-list-item-content>
                             </v-list-item>
 
-                            <v-list-item router to="/structure" link>
-                                <v-list-tile-content>
-                                    Structure de gestion
-                                </v-list-tile-content>
+                            <v-list-item router to="/video" link>
+                                <v-list-item-content>
+                                    Vidéo
+                                </v-list-item-content>
                             </v-list-item>
-                            <v-list-item router to="/don" link>
-                                <v-list-tile-content>
-                                    Nous faire un don
-                                </v-list-tile-content>
+                            <v-list-item router to="/contact" link>
+                                <v-list-item-content>
+                                    Contact
+                                </v-list-item-content>
                             </v-list-item>
+
+                           
                            
                         </v-list>
                     </div>
@@ -74,26 +78,28 @@
                     <div class="mr-1">
                         <v-list>
                             <v-list-item router to="/teamMember" link>
-                                <v-list-tile-content>
+                                <v-list-item-content>
                                     Notre groupe
-                                </v-list-tile-content>
+                                </v-list-item-content>
                             </v-list-item>
                             <v-list-item router to="/articles" link>
-                                <v-list-tile-content>
+                                <v-list-item-content>
                                     Nos articles
-                                </v-list-tile-content>
+                                </v-list-item-content>
                             </v-list-item>
 
-                            <v-list-item router to="/login_lega" v-if="userData.id_role == null"  link>
-                                <v-list-tile-content>
-                                    Se connecter
-                                </v-list-tile-content>
+                            <v-list-item router to="/structure" link>
+                                <v-list-item-content>
+                                    Structure de gestion
+                                </v-list-item-content>
                             </v-list-item>
-                            <v-list-item router to="/register_lega" v-if="userData.id_role == null" link>
-                                <v-list-tile-content>
-                                    S'enregistrer
-                                </v-list-tile-content>
+                            <v-list-item router to="/don" link>
+                                <v-list-item-content>
+                                    Nous faire un don
+                                </v-list-item-content>
                             </v-list-item>
+
+                            
                         </v-list>
                     </div>
 

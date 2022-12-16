@@ -286,6 +286,8 @@ export default {
             this.isLoading(false);
             this.edit = false;
             this.resetObj(this.svData);
+
+            this.dialog = false;
             this.onPageChange();
 
             // setTimeout(() => window.location.reload(), 2000);

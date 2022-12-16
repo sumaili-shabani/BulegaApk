@@ -2,10 +2,10 @@
     <div>
 
         <div class="text-center">
-            <span class="text-h5">{{titre}}</span>
+            <span class="text-h5"><h3>{{titre}}</h3></span>
            <p>
-            <router-link to="/login_lega" class="btn btn-warning btn-sm" >
-                Fiche d'identification ↵
+            <router-link to="/register_lega" class="btn btn-warning btn-sm white--text" >
+               <h3> Fiche d'identification ↵</h3>
             </router-link> 
            
            </p>

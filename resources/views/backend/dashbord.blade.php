@@ -17,7 +17,7 @@
    
     
     <!-- mes scripts -->
-    <link rel="shortcut icon" href="./images/pnud.png">
+    <link rel="shortcut icon" href="{{ asset('images/pnud.jpeg') }}">
     <!-- fin mes scripts -->
 
     {{-- swot et canavas --}}
@@ -34,7 +34,7 @@
 
     
 </head>
-<body>
+<body >
 
 
 	@if(isset(auth()->user()->email))

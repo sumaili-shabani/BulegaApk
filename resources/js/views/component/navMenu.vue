@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="userData.id_role != null">
     <v-menu offset-y>
       <template v-slot:activator="{ attrs, on }">
         <span style="cursor: pointer" v-bind="attrs" v-on="on">

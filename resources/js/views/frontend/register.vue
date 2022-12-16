@@ -111,11 +111,6 @@
                               <!-- chefferie et groupement -->
 
 
-
-
-
-
-
                               <v-checkbox :rules="[
                                 (v) => !!v || 'Vous devez accepter de continuer!',
                               ]" label="J'accepte Politique de confidentialité" required></v-checkbox>

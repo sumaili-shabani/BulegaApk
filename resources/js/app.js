@@ -55,6 +55,8 @@ Vue.component('register', require('./views/frontend/register.vue').default);
 Vue.component('forgot', require('./views/frontend/forgot.vue').default);
 Vue.component('reset', require('./views/frontend/reset.vue').default);
 
+Vue.component('index', require('./views/backend/siteInfo/index.vue').default);
+
 
 import Core from './mixins/core'
 Vue.mixin(Core);

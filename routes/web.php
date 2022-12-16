@@ -17,6 +17,7 @@ use Illuminate\Http\Request;
 
 Route::get('/', function () {
      return view('backend.dashbord');
+	// // return view('backend.dashbord');
 });
 
 Route::get('/test', function () {
@@ -28,11 +29,11 @@ Route::get('/dashbord', function () {
 });
 
 Route::get('/login_lega', function () {
-     return view('backend.dashbord');
+    return view('backend.dashbord');
 });
 
 Route::get('/register_lega', function () {
-     return view('backend.dashbord');
+    return view('backend.dashbord');
 });
 
 Route::post('/sendSms', 'HomeController@sendSms');

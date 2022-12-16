@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
     <!-- navigation -->
-    <v-navigation-drawer  v-model="drawer"  app  clipped > 
+    <v-navigation-drawer v-if="userData.id_role != null"  v-model="drawer"  app  clipped > 
 
       <v-list dense shaped>
         <v-subheader>Menu</v-subheader>
@@ -15,7 +15,15 @@
     <!-- appbar -->
     <v-app-bar clipped-left app flat elevation="1" >
 
-      <v-app-bar-nav-icon @click="changeDrawer"> </v-app-bar-nav-icon>
+       <!-- <v-icon large >home</v-icon> -->
+       <img
+          style="position: relative; top: 1px; border-radius: 100%;"
+          width="80"
+          :src="`${baseURL}/images/pnud.jpeg`"
+          alt=""
+        />
+
+      <v-app-bar-nav-icon @click="changeDrawer" v-if="userData.id_role != null"> </v-app-bar-nav-icon>
 
       <v-col lg="4" cols="4" xs="4" v-show="search">
         <v-form>
@@ -43,7 +51,7 @@
 
       <div class="d-none d-sm-flex">
         <v-btn router to="/about" text>
-          <v-icon>mail</v-icon> Qui sommes-nous ?
+          <v-icon>info</v-icon> Qui sommes-nous ?
         </v-btn>
 
 
@@ -143,7 +151,7 @@
     </v-app-bar>
     <!-- fin apbar -->
 
-    <v-main style="background: #f5f5f540">
+    <v-main id="bodyAll" >
       <v-container class="py-8 px-6" fluid>
         <router-view></router-view>
       </v-container>
@@ -160,6 +168,8 @@
   </v-app>
 </template>
 
+
+
 <script>
 import { mapGetters, mapActions } from "vuex";
 import Navigation from "./views/component/navigation.vue";
@@ -168,6 +178,7 @@ import NavMenu from "./views/component/navMenu.vue";
 import AutreMenu from  "./views/component/AutreMenu.vue";
 import CategoryMenu from  "./views/component/CategoryMenu.vue";
 import FooterVue from "./views/backend/siteInfo/Footer.vue";
+
 
 export default {
   name: "App",
@@ -550,5 +561,25 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+
+  #inspire {
+    /* background-image: url("./4.jpg"); */
+    /* background: #f5f5f540; */
+   
+    width: 100%;
+    /* height: 100vh; */
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 243, 224,0.8), rgba(29, 200, 205, 0.8)), url(./5.jpg) center top no-repeat;
+    background-size: cover;
+    position: relative;
+		    
+
+			
+  }
+
+</style>
+
 
 

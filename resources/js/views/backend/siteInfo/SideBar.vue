@@ -56,12 +56,12 @@
             <v-flex xs12 sm12 md12 lg12>
 
                 <div class="col-md-12">
-                    <h4>CATEGORIES</h4>
+                    <h4 class="text--white" style="color: #fff;">CATEGORIES</h4>
 
-                    <v-chip v-for="item in categoryArticleList" :key="item.id" 
+                    <v-chip v-for="item in categoryArticleList" :key="item.id" dark
                     class="mb-2 badge badge-warning mr-2"  @click="gotoCategoryBlog(item.slug)"
                         style="cursor: pointer;">
-                        {{item.nom}}
+                        <h3>{{item.nom}}</h3>
                     </v-chip>
 
                     <v-divider></v-divider>
@@ -71,12 +71,18 @@
                 </div>
 
                 <div class="col-md-12">
-                    <iframe
+                    <!-- <iframe
                        
                         src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fdreamofdrc%3F_rdc%3D1%26_rdr&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1153717905395954"
                         width="340" height="500" style="width: 100%;border:none;overflow:hidden" scrolling="no" frameborder="0"
                         allowfullscreen="true"
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                    </iframe> -->
+
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fprofile.php%3Fid%3D100088864477143&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1153717905395954" 
+                    width="340" height="500" 
+                    style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" 
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
                     <br>
                 </div>

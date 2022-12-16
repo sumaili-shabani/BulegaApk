@@ -10,7 +10,7 @@
                         <div class="text-center mb-4">
                             <h3 class="text-center">Nos recentes publications  !</h3>
                             <p>
-                                Explorez nos publications ! vous pouvez aussi <a href="javascript:void(0);" style="text-decoration: none;" @click="etatView = !etatView">
+                                Explorez nos publications ! vous pouvez aussi <a href="javascript:void(0);" style="text-decoration: none; color: #fff;" @click="etatView = !etatView">
                                     Rechercher un de nos artcles
                                 </a>
                             </p>

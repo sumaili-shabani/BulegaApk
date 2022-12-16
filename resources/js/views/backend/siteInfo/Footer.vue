@@ -114,27 +114,28 @@
                         <v-flex xs12 sm12 md6 lg6>
                           <div class="mr-1">
 
+                            
                             <v-list>
                                 <v-list-item router to="/" link>
-                                    <v-list-tile-content>
+                                    <v-list-item-content>
                                         Accueil
-                                    </v-list-tile-content>
+                                    </v-list-item-content>
                                 </v-list-item>
                                 <v-list-item router to="/galery_photo" link>
-                                    <v-list-tile-content>
+                                    <v-list-item-content>
                                         Galerie
-                                    </v-list-tile-content>
+                                    </v-list-item-content>
                                 </v-list-item>
 
                                 <v-list-item router to="/video" link>
-                                    <v-list-tile-content>
+                                    <v-list-item-content>
                                         Vidéo
-                                    </v-list-tile-content>
+                                    </v-list-item-content>
                                 </v-list-item>
                                 <v-list-item router to="/contact" link>
-                                    <v-list-tile-content>
+                                    <v-list-item-content>
                                         Contact
-                                    </v-list-tile-content>
+                                    </v-list-item-content>
                                 </v-list-item>
                             </v-list>
                           </div>
@@ -146,25 +147,25 @@
 
                             <v-list>
                                 <v-list-item router to="/about" link>
-                                    <v-list-tile-content>
+                                    <v-list-item-content>
                                         A propos
-                                    </v-list-tile-content>
+                                    </v-list-item-content>
                                 </v-list-item>
                                 <v-list-item router to="/work" link>
-                                    <v-list-tile-content>
+                                    <v-list-item-content>
                                         Ce que nous faisons
-                                    </v-list-tile-content>
+                                    </v-list-item-content>
                                 </v-list-item>
 
                                 <v-list-item router to="/structure" link>
-                                    <v-list-tile-content>
+                                    <v-list-item-content>
                                         Structure de gestion
-                                    </v-list-tile-content>
+                                    </v-list-item-content>
                                 </v-list-item>
                                 <v-list-item router to="/don" link>
-                                    <v-list-tile-content>
+                                    <v-list-item-content>
                                         Nous faire un don
-                                    </v-list-tile-content>
+                                    </v-list-item-content>
                                 </v-list-item>
                               
                             </v-list>
@@ -191,25 +192,25 @@
 
                             <v-list>
                                 <v-list-item router to="/teamMember" link>
-                                    <v-list-tile-content>
+                                    <v-list-item-content>
                                         Notre groupe
-                                    </v-list-tile-content>
+                                    </v-list-item-content>
                                 </v-list-item>
                                 <v-list-item router to="/articles" link>
-                                    <v-list-tile-content>
+                                    <v-list-item-content>
                                         Nos articles
-                                    </v-list-tile-content>
+                                    </v-list-item-content>
                                 </v-list-item>
 
                                 <v-list-item router to="/meteo" link>
-                                    <v-list-tile-content>
+                                    <v-list-item-content>
                                         Metéo
-                                    </v-list-tile-content>
+                                    </v-list-item-content>
                                 </v-list-item>
                                 <v-list-item router to="/map" link>
-                                    <v-list-tile-content>
+                                    <v-list-item-content>
                                         Localisation
-                                    </v-list-tile-content>
+                                    </v-list-item-content>
                                 </v-list-item>
                             </v-list>
                           </div>
@@ -222,25 +223,25 @@
                            
                             <v-list>
                                 <v-list-item link>
-                                    <v-list-tile-content>
+                                    <v-list-item-content>
                                         Email: {{sitInfoList.email}}
-                                    </v-list-tile-content>
+                                    </v-list-item-content>
                                 </v-list-item>
                                 <v-list-item link>
-                                    <v-list-tile-content>
+                                    <v-list-item-content>
                                         N° de téléphone: {{sitInfoList.tel1}}
-                                    </v-list-tile-content>
+                                    </v-list-item-content>
                                 </v-list-item>
 
                                 <v-list-item link>
-                                    <v-list-tile-content>
+                                    <v-list-item-content>
                                         N° de téléphone 2: {{sitInfoList.tel2}}
-                                    </v-list-tile-content>
+                                    </v-list-item-content>
                                 </v-list-item>
                                 <v-list-item router to="/contact" link>
-                                    <v-list-tile-content>
+                                    <v-list-item-content>
                                         Nous écrire
-                                    </v-list-tile-content>
+                                    </v-list-item-content>
                                 </v-list-item>
                               
                             </v-list>
