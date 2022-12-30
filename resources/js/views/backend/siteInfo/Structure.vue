@@ -8,7 +8,7 @@
                     <!-- debit -->
                     <div class="col-md-12">
                         <div class="text-center">
-                            <h3 class="text-center">Notre Structure de gestion!</h3>
+                            <h3 class="text-center">Nos remerciements</h3>
                         </div>
 
                         

@@ -40,7 +40,7 @@ class TeamController extends Controller
            
 
         }
-        $data->orderBy("teams.id", "desc");
+        $data->orderBy("teams.id", "asc");
         return $this->apiData($data->paginate(3));
     }
 

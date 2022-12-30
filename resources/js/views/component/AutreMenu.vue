@@ -36,6 +36,12 @@
                                 </v-list-item-content>
                             </v-list-item>
 
+                            <v-list-item router to="/structure"  link>
+                                <v-list-item-content>
+                                    Nos remerciements
+                                </v-list-item-content>
+                            </v-list-item>
+
                             
                         </v-list>
                     </div>
@@ -88,11 +94,7 @@
                                 </v-list-item-content>
                             </v-list-item>
 
-                            <v-list-item router to="/structure" link>
-                                <v-list-item-content>
-                                    Structure de gestion
-                                </v-list-item-content>
-                            </v-list-item>
+                           
                             <v-list-item router to="/don" link>
                                 <v-list-item-content>
                                     Nous faire un don

@@ -64,7 +64,7 @@ Route::get('resete', function () {
 
 Route::group(['namespace'	=>	"Connexion"], function(){
 	Route::post("checkLogin", 'ConnexionController@checkLogin');
-	Route::post("register_count", 'ConnexionController@createCount');
+	Route::post("register_count", 'ConnexionController@createCount2');
 	Route::get("logout", 'ConnexionController@logout');
 	
 	

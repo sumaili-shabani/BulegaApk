@@ -456,6 +456,12 @@ export default {
               text: "Chat",
               href: "/user/chat",
             },
+
+            {
+              icon: "person",
+              text: "Mon profil",
+              href: "/user/profil",
+            },
           ],
 
           links_operation: [
@@ -571,7 +577,7 @@ export default {
     width: 100%;
     /* height: 100vh; */
     height: 100%;
-    background: linear-gradient(45deg, rgba(255, 243, 224,0.8), rgba(29, 200, 205, 0.8)), url(./5.jpg) center top no-repeat;
+    background: linear-gradient(45deg, rgba(255, 243, 224,0.8), rgba(43, 39, 146, 0.8)), url(./5.jpg) center top no-repeat;
     background-size: cover;
     position: relative;
 		    

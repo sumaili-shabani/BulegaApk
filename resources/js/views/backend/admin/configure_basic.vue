@@ -95,9 +95,9 @@
                       outlined
                       v-model="svData.structure"
                     ></v-textarea> -->
-                    <label>Structure de gestion</label>
+                    <label>Nos Remerciements</label>
                     <ckeditor
-                      label="Structure de gestion"
+                      label="Nos Remerciements"
                       :editor="editor"
                       v-html="svData.structure"
                       v-model="svData.structure"
