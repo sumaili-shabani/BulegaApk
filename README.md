@@ -1,7 +1,8 @@
 # BulegaApk
 BulegaApk Est une application d'identification de membre lega
 # Clonner le projet Importer la base de données dans php my admin 
-télécharger le dossier en zip et importer le dans votre SGBDR 
+télécharger le dossier en zip et importer le dans votre SGBDR ou faite
+git clone git@github.com:sumaili-shabani/BulegaApk.git
 # Comment installer:
 composer install 
 npm install 
