@@ -198,6 +198,24 @@ class UserController extends Controller
                 'idChef'            =>  $request->idChef,
                 'idGroup'           =>  $request->idGroup,
 
+                // autres
+                'fonction'          =>  $request->fonction,    
+                'etatcivil'         =>  $request->etatcivil,   
+                'nbrEnfant'         =>  $request->nbrEnfant,   
+                'nomPere'           =>  $request->nomPere, 
+                'nomMere'           =>  $request->nomMere, 
+                'Pays'              =>  $request->Pays,    
+                'Province'          =>  $request->Province,    
+                'ville'             =>  $request->ville,   
+                'commune'           =>  $request->idGroup, 
+                'quartier'          =>  $request->quartier,    
+                'avenue'            =>  $request->avenue,  
+                'etude'             =>  $request->etude,   
+                'faculte'           =>  $request->faculte, 
+                'domaine'           =>  $request->domaine, 
+                'activite'          =>  $request->activite,    
+                'entreprise'        =>  $request->entreprise
+
 
                 
             ]);
@@ -225,6 +243,24 @@ class UserController extends Controller
                 'idTer'             =>  $request->idTer,
                 'idChef'            =>  $request->idChef,
                 'idGroup'           =>  $request->idGroup,
+
+                // autres
+                'fonction'          =>  $request->fonction,    
+                'etatcivil'         =>  $request->etatcivil,   
+                'nbrEnfant'         =>  $request->nbrEnfant,   
+                'nomPere'           =>  $request->nomPere, 
+                'nomMere'           =>  $request->nomMere, 
+                'Pays'              =>  $request->Pays,    
+                'Province'          =>  $request->Province,    
+                'ville'             =>  $request->ville,   
+                'commune'           =>  $request->idGroup, 
+                'quartier'          =>  $request->quartier,    
+                'avenue'            =>  $request->avenue,  
+                'etude'             =>  $request->etude,   
+                'faculte'           =>  $request->faculte, 
+                'domaine'           =>  $request->domaine, 
+                'activite'          =>  $request->activite,    
+                'entreprise'        =>  $request->entreprise
             ]);
 
             
@@ -484,6 +520,23 @@ class UserController extends Controller
             "territoires.nomTerritoire", "chefferis.nomTer", "groupements.nomGroup", 
 
             //fiche suite 
+            'users.fonction',    
+            'users.etatcivil',   
+            'users.nbrEnfant',   
+            'users.nomPere', 
+            'users.nomMere', 
+            'users.Pays',    
+            'users.Province',    
+            'users.ville',   
+            'users.commune', 
+            'users.quartier',    
+            'users.avenue',  
+            'users.etude',   
+            'users.faculte', 
+            'users.domaine', 
+            'users.activite',    
+            'users.entreprise',
+
              
 
 

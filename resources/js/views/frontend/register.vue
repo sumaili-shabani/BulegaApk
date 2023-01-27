@@ -180,7 +180,7 @@
 
                       <v-select
                         :items="ListeCelibataire"
-                        label="Quel est votre  Etat civil?"
+                        label="Etat civil"
                         prepend-inner-icon="extension"
                         
                         outlined
@@ -198,7 +198,7 @@
                       ></v-text-field>
 
                       <v-text-field
-                        label="Quel est le nom de votre père ? "
+                        label="Nom du père "
                         
                         prepend-inner-icon="extension"
                         outlined
@@ -206,7 +206,7 @@
                       ></v-text-field>
 
                       <v-text-field
-                        label="Quel est le nom de votre mère ? "
+                        label="Nom de la mère ? "
                         
                         prepend-inner-icon="extension"
                         outlined
@@ -214,7 +214,7 @@
                       ></v-text-field>
 
                       <v-text-field
-                        label="Dans quel pays vous habitez actuellement ?"
+                        label="Pays de residence"
                         
                         prepend-inner-icon="extension"
                         outlined
@@ -222,7 +222,7 @@
                       ></v-text-field>
 
                       <v-text-field
-                        label="Dans quelle province habitez- vous actuellement ?"
+                        label="Province de residence"
                         
                         prepend-inner-icon="extension"
                         outlined
@@ -230,7 +230,7 @@
                       ></v-text-field>
 
                       <v-text-field
-                        label="Quel est le nom de la ville ou village dans laquelle vous residez actuellement ? "
+                        label="Ville ou village de residence "
                         
                         prepend-inner-icon="extension"
                         outlined
@@ -238,21 +238,21 @@
                       ></v-text-field>
 
                       <v-text-field
-                        label="Quel est le nom de la Commune dans laquelle vous habitez actuellement ?"
+                        label=" Commune de residence"
                         prepend-inner-icon="extension"
                         outlined
                         v-model="svData.commune"
                       ></v-text-field>
 
                       <v-text-field
-                        label="Précisez  le nom du Quartier ou de la  rue dans laquelle  vous résidez actuellement"
+                        label="Quartier de residence"
                         prepend-inner-icon="extension"
                         outlined
                         v-model="svData.quartier"
                       ></v-text-field>
 
                       <v-text-field
-                        label="Quel est le nom de votre Avenue de  votre résidence  actuelle "
+                        label="Avenue de residence"
                         prepend-inner-icon="extension"
                         outlined
                         v-model="svData.avenue"
@@ -261,7 +261,7 @@
                     
                       <v-select
                         :items="ListeEtude"
-                        label="Quel est  votre plus haut  Niveau d’Etudes  atteint ? "
+                        label="Votre Niveau d’Etudes "
                         prepend-inner-icon="extension"
                         
                         outlined
@@ -272,7 +272,7 @@
                       ></v-select>
 
                       <v-text-field
-                        label="Si vous avez fait les  études   secondaires ou universitaires,  dans quelle section ou faculté les avez-vous  réalisés ? "
+                        label="Dans quelle section ou faculté les avez-vous  réalisés ? "
                         prepend-inner-icon="extension"
                         outlined
                         v-model="svData.faculte"
@@ -287,7 +287,7 @@
 
                       <v-select
                         :items="ListeActivite"
-                        label="Quel type d’activité exercez- vous actuellement ?  "
+                        label="Quel type d’activité exercez- vous ?  "
                         prepend-inner-icon="extension"
                         
                         outlined
@@ -298,14 +298,14 @@
                       ></v-select>
 
                       <v-text-field
-                        label="Dans quelle entreprise exercez-vous actuellement ? "
+                        label="L'entreprise ou vous travaillez actuellement ? "
                         prepend-inner-icon="extension"
                         outlined
                         v-model="svData.entreprise"
                       ></v-text-field>
 
                       <v-text-field
-                        label="Quelle fonction assurez-vous au sein de votre entreprise ?"
+                        label="Votre fonction dans entreprise ?"
                         prepend-inner-icon="extension"
                         outlined
                         v-model="svData.fonction"

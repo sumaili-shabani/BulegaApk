@@ -156,6 +156,148 @@
                   </div>
                 </v-flex>
 
+                <!-- autres info -->
+                <v-flex xs12 sm12 md12 lg12>
+
+                  <div class="mr-1">
+
+                    <v-select
+                      :items="ListeCelibataire"
+                      label="Etat civil"
+                      prepend-inner-icon="extension"
+                      
+                      outlined
+                      dense
+                      item-text="designation"
+                      item-value="designation"
+                      v-model="svData.etatcivil"
+                    ></v-select>
+
+                    <v-text-field
+                      label="Si vous êtes  marié, divorcé ou veuf(Ve) combien d’enfants avez-vous ?"
+                      prepend-inner-icon="extension"
+                      outlined
+                      v-model="svData.nbrEnfant"
+                    ></v-text-field>
+
+                    <v-text-field
+                      label="Nom du père "
+                      
+                      prepend-inner-icon="extension"
+                      outlined
+                      v-model="svData.nomPere"
+                    ></v-text-field>
+
+                    <v-text-field
+                      label="Nom de la mère ? "
+                      
+                      prepend-inner-icon="extension"
+                      outlined
+                      v-model="svData.nomMere"
+                    ></v-text-field>
+
+                    <v-text-field
+                      label="Pays de residence"
+                      
+                      prepend-inner-icon="extension"
+                      outlined
+                      v-model="svData.Pays"
+                    ></v-text-field>
+
+                    <v-text-field
+                      label="Province de residence"
+                      
+                      prepend-inner-icon="extension"
+                      outlined
+                      v-model="svData.Province"
+                    ></v-text-field>
+
+                    <v-text-field
+                      label="Ville ou village de residence "
+                      
+                      prepend-inner-icon="extension"
+                      outlined
+                      v-model="svData.ville"
+                    ></v-text-field>
+
+                    <v-text-field
+                      label=" Commune de residence"
+                      prepend-inner-icon="extension"
+                      outlined
+                      v-model="svData.commune"
+                    ></v-text-field>
+
+                    <v-text-field
+                      label="Quartier de residence"
+                      prepend-inner-icon="extension"
+                      outlined
+                      v-model="svData.quartier"
+                    ></v-text-field>
+
+                    <v-text-field
+                      label="Avenue de residence"
+                      prepend-inner-icon="extension"
+                      outlined
+                      v-model="svData.avenue"
+                    ></v-text-field>
+
+
+                    <v-select
+                      :items="ListeEtude"
+                      label="Votre Niveau d’Etudes "
+                      prepend-inner-icon="extension"
+                      
+                      outlined
+                      dense
+                      item-text="designation"
+                      item-value="designation"
+                      v-model="svData.etude"
+                    ></v-select>
+
+                    <v-text-field
+                      label="Dans quelle section ou faculté les avez-vous  réalisés ? "
+                      prepend-inner-icon="extension"
+                      outlined
+                      v-model="svData.faculte"
+                    ></v-text-field>
+
+                    <v-text-field
+                      label="Si vous avez fait les  études  de master ou de doctorant,  dans quelle domaine de recherche vous étiez vous spécialiser ?"
+                      prepend-inner-icon="extension"
+                      outlined
+                      v-model="svData.domaine"
+                    ></v-text-field>
+
+                    <v-select
+                      :items="ListeActivite"
+                      label="Quel type d’activité exercez- vous ?  "
+                      prepend-inner-icon="extension"
+                      
+                      outlined
+                      dense
+                      item-text="designation"
+                      item-value="designation"
+                      v-model="svData.activite"
+                    ></v-select>
+
+                    <v-text-field
+                      label="L'entreprise ou vous travaillez actuellement ? "
+                      prepend-inner-icon="extension"
+                      outlined
+                      v-model="svData.entreprise"
+                    ></v-text-field>
+
+                    <v-text-field
+                      label="Votre fonction dans entreprise ?"
+                      prepend-inner-icon="extension"
+                      outlined
+                      v-model="svData.fonction"
+                    ></v-text-field>
+
+                  </div>
+
+                </v-flex>
+                <!-- fin autre info -->
                
 
                
@@ -453,6 +595,24 @@ export default {
         idTer: "",
         idChef: "",
         idGroup: "",
+
+         // autres
+        fonction:"",	
+        etatcivil: "",	
+        nbrEnfant	: "",
+        nomPere	: "",
+        nomMere	: "",
+        Pays	: "",
+        Province: "",	
+        ville	: "",
+        commune	: "",
+        quartier: "",	
+        avenue: "",	
+        etude	: "",
+        faculte	: "",
+        domaine	: "",
+        activite: "",	
+        entreprise: "",
       },
       stataData:{
         ChefferiList:'',
@@ -464,10 +624,10 @@ export default {
   },
 
   computed: {
-    ...mapGetters(["userList","OurTerritoire", "isloading"]),
+    ...mapGetters(["basicInfoList","userList","OurTerritoire", "sitInfoList", "ListeTerritoire", "categoryArticleList","ListeCelibataire", "ListeEtude","ListeActivite", "isloading"]),
   },
   methods: {
-    ...mapActions(["getUser","getOurTerritoire"]),
+    ...mapActions(["getUser","getOurTerritoire","getInfoBasic", "getInfoSite","getCategyArticle"]),
 
     showPhotoModal(id, avatar) {
       this.$refs.uploadImage.$data.dialog = true;

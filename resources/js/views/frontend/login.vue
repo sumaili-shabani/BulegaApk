@@ -33,12 +33,10 @@
                                 </p>
                             </div>
                             <br />
-                            <v-text-field v-model="svData.email" outlined append-icon="email" :rules="[
+                            <v-text-field v-model="svData.telephone" outlined append-icon="phone" :rules="[
                               (v) => !!v || 'Ce champ est requis',
-                              (v) =>
-                                /.+@.+\..+/.test(v) ||
-                                'Doit être un email valide',
-                            ]" placeholder="E-mail"></v-text-field>
+                              
+                            ]" placeholder="N° de téléphone"></v-text-field>
                             <v-text-field placeholder="Password" v-model="svData.password"
                               :type="show1 ? 'text' : 'password'" outlined
                               :append-icon="show1 ? 'visibility' : 'visibility_off'"
@@ -112,7 +110,7 @@ export default {
       edit: false,
 
       svData: {
-        email: "",
+        telephone: "",
         password: "",
       },
       valid: false,

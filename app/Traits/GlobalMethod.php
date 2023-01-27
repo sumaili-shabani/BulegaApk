@@ -90,6 +90,15 @@ trait GlobalMethod{
       return $data;
     }
 
+    function showCountTableWhereTestInsert($table,$column, $valeur,$column2, $valeur2)
+    {
+      $data = DB::table($table)->where([
+        [$column,'=', $valeur],
+        [$column2,'=', $valeur2]
+      ])->count();
+      return $data;
+    }
+
     //difentent de column null
      function showCountTableWhereNull($table,$column, $valeur,$column2, $valeur2)
     {

@@ -127,6 +127,7 @@ export default {
         },
 
         svErr() {
+            
             this.$toasted.show('veuillez vérifier si vous êtes connecté !', {
                 icon: 'info',
                 action: {
